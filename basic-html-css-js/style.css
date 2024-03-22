@@ -1,0 +1,36 @@
+/*CSS for simple-page.html*/
+
+body{
+    background-color: whitesmoke;
+}
+
+h1, h3{
+    color: blue;
+    text-align: center;
+    border: 2px inset black;
+    border-radius: 20px;
+    padding: 25px 50px;
+    width: 500px;
+}
+
+p{
+    font-family: monospace;
+    font-size: 14px;
+    margin: 50px 20px;
+}
+
+#bottom{
+    text-align: center;
+    background-color: plum;
+    color:darkmagenta;
+    opacity: 0.8;
+    margin:auto;
+}
+
+.fancy{
+    font-family: cursive;
+    background-image: url("https://t4.ftcdn.net/jpg/04/45/54/61/360_F_445546133_HBigI32PYZa62duM5FOd32D8QG8qyj2L.jpg");
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    height:180px;
+}
