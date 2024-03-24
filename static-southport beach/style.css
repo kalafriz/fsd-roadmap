@@ -1,0 +1,67 @@
+header{
+    display: block;
+    padding: 20px;
+}
+.header{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5e723e2e154006011f844f32/1593010720809-G7DT22V54GNBJQA8KKZE/EF_Five+Beach+Bike+Tour_Southport+Beach_6P3A4390.jpg);
+}
+.header ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: rgb(53, 53, 95);
+}
+.header li{
+    float: left;
+}
+.header li a{
+    display: inline-block;
+    color: whitesmoke;
+    text-align: center;
+    padding:10px;
+    text-decoration: none;
+}
+body{
+    background-color: #9daec9;
+}
+h1{
+    text-align: center;
+    font-family: 'Playfair Display', 'Georgia';
+    color:whitesmoke;
+    font-size: 3vw;
+}
+.organism-container{
+    display: flex;
+}
+div.organism{ 
+    background-color: whitesmoke;
+    float: left;
+    width: 20%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 1%;
+}
+div.organism-container h3{
+    text-decoration: underline;
+    text-align: center;
+    font-family: 'Georgia';
+}
+div.organism-container p{
+    font-family: 'Verdana';
+}
+div.organism img{
+    width:100%
+}
+table{
+    width:70%;
+    margin: auto;
+}
+th,td{
+    border-bottom: 1px solid black;
+    padding:10px;
+}
+tr:nth-child(even){
+    background-color: #657ba0;
+    color:whitesmoke
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/favicon.gif">
+        <title>Ecology of Southport Beach</title>
+
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <h1><i>ECOLOGY of SOUTHPORT BEACH</i></h1>
+            <ul>
+                <li><a href="#index">Home</a></li>
+                <li><a href="#species">Species</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </header>
+
+        <h3>Welcome to Southport Beach! Here's some animals you might find:</h3>
+        <div class="organism-container">
+            <div class="organism">
+                <img alt="Horshoe Crab" class="organism" src="https://assets.newatlas.com/dims4/default/a097a2d/2147483647/strip/true/crop/2400x1600+0+0/resize/2400x1600!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F0f%2Fab%2F796a36e4413a8020917d673b17e7%2Flimulus-polyphemus-atlantic-horseshoe-crab-adult-underside-26923436154.jpeg">
+                <br><h3>Horshoe Crab</h3>
+            </div>
+            <div class="organism">
+                <img alt="Common Periwinkle Snail" class="organism" src="https://www.nps.gov/articles/000/images/Shoreline-CloseUp.jpg?maxwidth=1300&autorotate=false">
+                <br><h3>Common Periwinkle Snail</h3>
+            </div>
+        </div>
+
+        <div>
+            <p><a href="species.html">Learn about species here!</a></p>
+
+            <h3>Explore the beach! Click for more info.</h3>
+            <img alt="Southport Beach" usemap="#beachmap" height="400" src="https://images.squarespace-cdn.com/content/v1/5e723e2e154006011f844f32/1593010720809-G7DT22V54GNBJQA8KKZE/EF_Five+Beach+Bike+Tour_Southport+Beach_6P3A4390.jpg">
+            <map name="beachmap">
+                <area shape="rect" coords="0,100, 600,200" alt="sand" href="google.com">
+                <area shape="rect" coords="0,200, 600,400" alt="marsh" href="index.html">
+            </map>
+        </div>
+        
+        <div>
+            <p>How was your beach experience?</p>
+            <br>
+            <form action="/action_page.php" target="_blank">
+                <label for="name">Name: </label><br>
+                <input type="text" name="name"><br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date"><br>
+
+                <label for="exp">Write about your experience: </label><br>
+                <textarea name="exp" rows="10" cols="40"></textarea><br>
+
+                <p>What was your favorite part?</p>
+                <input type="radio" id="sound" name="fav_part" value="water">
+                <label for="sound">The water of the long island sound</label><br>
+                <input type="radio" id="sand" name="fav_part" value="sand">
+                <label for="sand">Playing in the sand</label><br>
+                <input type="radio" id="shells" name="fav_part" value="shells">
+                <label for="shells">Finding seashells</label><br>
+                <input type="radio" id="animals" name="fav_part" value="animals">
+                <label for="animals">Finding crabs and animals</label><br>
+                <input type="radio" id="plants" name="fav_part" value="plants">
+                <label for="plants">Finding cool plants</label><br>
+                <label for="other">Other: </label>
+                <input type="text" name="other"><br>
+
+                <label for="transport">How did you get here?</label>
+                <input list="transport">
+                <datalist id="transport">
+                    <option value="Car">
+                    <option value="Walk">
+                    <option value="Bike">
+                    <option value="public transport">
+                </datalist>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </body>
+</html>
