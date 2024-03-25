@@ -36,6 +36,13 @@ header{
     padding:10px;
     text-decoration: none;
 }
+.nav li a:hover{
+    background-color:rgb(23, 23, 34);
+}
+.nav li a:active{
+    background-color:whitesmoke;
+    color:rgb(53, 53, 95);
+}
 body{
     background-color: #9daec9;
 }
