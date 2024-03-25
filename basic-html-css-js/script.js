@@ -31,11 +31,10 @@ function countToThree(){
 
 function removeFancy(){
     let message = "Are you sure you want to remove all fancy elements on this page?";
-    alert("hi");
     if(confirm(message)){
         let x = document.getElementsByClassName("fancy");
         for (let i=0; i< x.length; i++){
-            x[i].computedStyleMap.display="none";
+            x[i].style.display="none";
         }
     }
 }
