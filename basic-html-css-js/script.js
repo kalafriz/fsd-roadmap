@@ -38,3 +38,7 @@ function removeFancy(){
         }
     }
 }
+
+function changeText(){
+    document.getElementById("changeMe").innerHTML="Ouch!";
+}
