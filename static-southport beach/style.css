@@ -5,17 +5,18 @@ header{
 .header{
     background-image: url(https://images.squarespace-cdn.com/content/v1/5e723e2e154006011f844f32/1593010720809-G7DT22V54GNBJQA8KKZE/EF_Five+Beach+Bike+Tour_Southport+Beach_6P3A4390.jpg);
 }
-.header ul{
+.nav ul{
+    display:block;
     list-style-type: none;
     margin:0;
     padding:0;
     overflow: hidden;
     background-color: rgb(53, 53, 95);
 }
-.header li{
+.nav li{
     float: left;
 }
-.header li a{
+.nav li a{
     display: inline-block;
     color: whitesmoke;
     text-align: center;
