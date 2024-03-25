@@ -3,6 +3,7 @@
     <head>
         <!-- META -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/favicon.gif">
@@ -25,70 +26,76 @@
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
-        <h3>Welcome to Southport Beach! Here's some animals you might find:</h3>
-        <div class="organism-container">
-            <div class="organism">
-                <img alt="Horshoe Crab" class="organism" src="https://assets.newatlas.com/dims4/default/a097a2d/2147483647/strip/true/crop/2400x1600+0+0/resize/2400x1600!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F0f%2Fab%2F796a36e4413a8020917d673b17e7%2Flimulus-polyphemus-atlantic-horseshoe-crab-adult-underside-26923436154.jpeg">
-                <br><h3>Horshoe Crab</h3>
+        <aside class="left">
+            <p>Responsive left/top box yayyyyy</p>
+        </aside>
+        <div class="main">
+                <h3>Welcome to Southport Beach! Here's some animals you might find:</h3>
+            <div class="organism-container">
+                <div class="organism">
+                    <img alt="Horshoe Crab" class="organism" src="https://assets.newatlas.com/dims4/default/a097a2d/2147483647/strip/true/crop/2400x1600+0+0/resize/2400x1600!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F0f%2Fab%2F796a36e4413a8020917d673b17e7%2Flimulus-polyphemus-atlantic-horseshoe-crab-adult-underside-26923436154.jpeg">
+                    <br><h3>Horshoe Crab</h3>
+                </div>
+                <div class="organism">
+                    <img alt="Common Periwinkle Snail" class="organism" src="https://www.nps.gov/articles/000/images/Shoreline-CloseUp.jpg?maxwidth=1300&autorotate=false">
+                    <br><h3>Common Periwinkle Snail</h3>
+                </div>
             </div>
-            <div class="organism">
-                <img alt="Common Periwinkle Snail" class="organism" src="https://www.nps.gov/articles/000/images/Shoreline-CloseUp.jpg?maxwidth=1300&autorotate=false">
-                <br><h3>Common Periwinkle Snail</h3>
+            
+            <div>
+                <p><a href="species.html">Learn about species here!</a></p>
+
+                <h3>Explore the beach! Click for more info.</h3>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2500 1667">
+                    <image width="80%" xlink:href="images/beach.jpg"></image> <a xlink:href="species.html">
+                    <rect x="0" y="576" fill="#fff" opacity="0" width="2500" height="313"></rect>
+                    </a><a xlink:href="index.html">
+                    <rect x="0" y="912" fill="#fff" opacity="0" width="2500" height="755"></rect>
+                    </a>
+                </svg>
             </div>
-        </div>
+            
+            <div>
+                <p>How was your beach experience?</p>
+                <br>
+                <form action="/action_page.php" target="_blank">
+                    <label for="name">Name: </label><br>
+                    <input type="text" name="name"><br>
 
-        <div>
-            <p><a href="species.html">Learn about species here!</a></p>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date"><br>
 
-            <h3>Explore the beach! Click for more info.</h3>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2500 1667">
-                <image width="2500" height="1667" xlink:href="images/beach.jpg"></image> <a xlink:href="species.html">
-                  <rect x="0" y="576" fill="#fff" opacity="0" width="2500" height="313"></rect>
-                </a><a xlink:href="index.html">
-                  <rect x="0" y="912" fill="#fff" opacity="0" width="2500" height="755"></rect>
-                </a>
-              </svg>
+                    <label for="exp">Write about your experience: </label><br>
+                    <textarea name="exp" rows="10" cols="40"></textarea><br>
+
+                    <p>What was your favorite part?</p>
+                    <input type="radio" id="sound" name="fav_part" value="water">
+                    <label for="sound">The water of the long island sound</label><br>
+                    <input type="radio" id="sand" name="fav_part" value="sand">
+                    <label for="sand">Playing in the sand</label><br>
+                    <input type="radio" id="shells" name="fav_part" value="shells">
+                    <label for="shells">Finding seashells</label><br>
+                    <input type="radio" id="animals" name="fav_part" value="animals">
+                    <label for="animals">Finding crabs and animals</label><br>
+                    <input type="radio" id="plants" name="fav_part" value="plants">
+                    <label for="plants">Finding cool plants</label><br>
+                    <label for="other">Other: </label>
+                    <input type="text" name="other"><br>
+
+                    <label for="transport">How did you get here?</label>
+                    <input list="transport">
+                    <datalist id="transport">
+                        <option value="Car">
+                        <option value="Walk">
+                        <option value="Bike">
+                        <option value="public transport">
+                    </datalist>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
         
-        <div>
-            <p>How was your beach experience?</p>
-            <br>
-            <form action="/action_page.php" target="_blank">
-                <label for="name">Name: </label><br>
-                <input type="text" name="name"><br>
-
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date"><br>
-
-                <label for="exp">Write about your experience: </label><br>
-                <textarea name="exp" rows="10" cols="40"></textarea><br>
-
-                <p>What was your favorite part?</p>
-                <input type="radio" id="sound" name="fav_part" value="water">
-                <label for="sound">The water of the long island sound</label><br>
-                <input type="radio" id="sand" name="fav_part" value="sand">
-                <label for="sand">Playing in the sand</label><br>
-                <input type="radio" id="shells" name="fav_part" value="shells">
-                <label for="shells">Finding seashells</label><br>
-                <input type="radio" id="animals" name="fav_part" value="animals">
-                <label for="animals">Finding crabs and animals</label><br>
-                <input type="radio" id="plants" name="fav_part" value="plants">
-                <label for="plants">Finding cool plants</label><br>
-                <label for="other">Other: </label>
-                <input type="text" name="other"><br>
-
-                <label for="transport">How did you get here?</label>
-                <input list="transport">
-                <datalist id="transport">
-                    <option value="Car">
-                    <option value="Walk">
-                    <option value="Bike">
-                    <option value="public transport">
-                </datalist>
-
-                <input type="submit" value="Submit">
-            </form>
-        </div>
 
     </body>
 </html>
