@@ -2,23 +2,30 @@
 
 // Script used by simple-page.html
 
-let user = 'John', age = 25;
+let user = {
+    name:'John',
+    age: 25,
+    "likes birds": true,
+}
 const bday = '18.03.2995';
 
 const COLOR_BLUE="00F"
-alert(`${user} is ${age} years old.`);
+alert(`${user.name} is ${user.age} years old.`);
 
 let yourAge = prompt("How old are you?", ["50"]);
 
 let ageDiff= (age1, age2) => Math.abs(age1-age2);
 if(confirm(`Are you really ${yourAge} years old?!`)){
 
-    let message = (yourAge > age) ? `You're ${ageDiff(age, yourAge)} years older than ${user}!`:
-        (yourAge==age) ? `You're the same age as ${user}!`:
-        `You're ${ageDiff(age, yourAge)} years younger than ${user}!`;
+    let message = (yourAge > user.age) ? `You're ${ageDiff(user.age, yourAge)} years older than ${user.name}!`:
+        (yourAge==user.age) ? `You're the same age as ${user.name}!`:
+        `You're ${ageDiff(user.age, yourAge)} years younger than ${user.name}!`;
     alert(message);
 }
 
+let clone = structuredClone(user);
+clone.name = "Bob";
+alert(`${clone.name} is a structured clone of ${user.name}`)
 
 function countToThree(){
     let i=1;
