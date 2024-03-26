@@ -85,22 +85,31 @@ h1{
 }
 div.organism{ 
     background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-sizing: border-box;
     float: left;
     width: 20%;
     border-radius: 20px;
     overflow: hidden;
     margin: 1%;
+} div.organism:hover{
+    transform: scale(1.1,1.1);
+    transition: .05s;
+    transition-timing-function: ease-in;
 }
-div.organism-container h3{
-    text-decoration: underline;
+.organism h4{
     text-align: center;
     font-family: 'Georgia';
+    margin-top: 10px;
 }
-div.organism-container p{
+.organism p{
     font-family: 'Verdana';
 }
-div.organism img{
-    width:100%
+.organism img{
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    width: 90%;
 }
 table{
     width:70%;
