@@ -20,8 +20,19 @@
         </header>
         <nav class="nav">
             <ul>
-                <li><a href="#index">Home</a></li>
-                <li><a href="#species">Species</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Species</a>
+                    <div class="dropdown-content">
+                      <a href="#">Plants</a>
+                      <a href="#">Mollusks</a>
+                      <a href="#">Crustaceans</a>
+                      <a href="#">Fish</a>
+                      <a href="#">Birds</a>
+                      <a href="#">Mammals</a>
+                      <a href="#">Other</a>
+                    </div>
+                  </li>
                 <li><a href="#activities">Activities</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
@@ -29,7 +40,7 @@
         <aside class="left">
             <p>Responsive left/top box yayyyyy</p>
         </aside>
-        <div class="main">
+        <section class="main">
                 <h3>Welcome to Southport Beach! Here's some animals you might find:</h3>
             <div class="organism-container">
                 <div class="organism">
@@ -42,7 +53,7 @@
                 </div>
             </div>
             
-            <div>
+            <section>
                 <p><a href="species.html">Learn about species here!</a></p>
 
                 <h3>Explore the beach! Click for more info.</h3>
@@ -53,9 +64,9 @@
                     <rect x="0" y="912" fill="#fff" opacity="0" width="2500" height="755"></rect>
                     </a>
                 </svg>
-            </div>
+            </section>
             
-            <div>
+            <section>
                 <p>How was your beach experience?</p>
                 <br>
                 <form action="/action_page.php" target="_blank">
@@ -66,7 +77,7 @@
                     <input type="date" id="date" name="date"><br>
 
                     <label for="exp">Write about your experience: </label><br>
-                    <textarea name="exp" rows="10" cols="40"></textarea><br>
+                    <textarea name="exp" class="boxsizingBorder"></textarea><br>
 
                     <p>What was your favorite part?</p>
                     <input type="radio" id="sound" name="fav_part" value="water">
@@ -83,18 +94,17 @@
                     <input type="text" name="other"><br>
 
                     <label for="transport">How did you get here?</label>
-                    <input list="transport">
-                    <datalist id="transport">
-                        <option value="Car">
-                        <option value="Walk">
-                        <option value="Bike">
-                        <option value="public transport">
-                    </datalist>
+                    <select id="transport">
+                        <option value="Car">Car</option>
+                        <option value="Walk">Walk</option>
+                        <option value="Bike">Bike</option>
+                        <option value="public transport">Public transportation</option>
+                    </select>
 
                     <input type="submit" value="Submit">
                 </form>
-            </div>
-        </div>
+            </section>
+        </section>
         
 
     </body>
