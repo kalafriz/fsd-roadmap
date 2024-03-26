@@ -13,7 +13,12 @@
     <body>
         <a href="#bottom">Go to bottom of the page</a>
         <h1 style="background-color: #fff; border: 2px solid Tomato;">This is a Heading (1)</h1>
-        
+        <h2>Click this box below to draw with JavaScript!</h2>
+        <canvas onclick="fillCanvas()" id="myCanvas" width="400" height ="200" style="background-color:white; border: 2px solid red;"></canvas>
+        <h2>This one's a SVG!</h2>
+        <svg width="300" height="200">
+            <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:royalblue;stroke:purple;stroke-width:5;" fill="url(grad1)"  />
+          </svg>
         <script>
             alert("Hello, world!");
         </script>
