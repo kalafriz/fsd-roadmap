@@ -36,14 +36,23 @@ function Cat(name){
     };
 }
 
+let allcats = [];
+
 function cats(){
     let name = prompt("Name your cat!", "Nameless");
     let kitty = new Cat(name);
+    allcats.push(kitty);
     if(confirm(`Feed ${kitty.name}?`)){
         kitty.feed();
     }
     let message = (kitty.isHungry) ? `${kitty.name} is hungry!`:
     `${kitty.name} isn't hungry.`;
+    alert(message);
+    message = "All of your cats: ";
+    for (let cat of allcats){
+        message+=cat.name;
+        message+=", "
+    }
     alert(message);
 }
 
