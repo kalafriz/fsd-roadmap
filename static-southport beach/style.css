@@ -39,21 +39,18 @@ header {
 
 .nav li {
   float: left; }
-
-.nav li a {
-  display: inline-block;
-  color: whitesmoke;
-  text-align: left;
-  min-width: 100%;
-  padding: 10px 20px;
-  text-decoration: none; }
-
-.nav li a:hover, .dropdown:hover .dropbtn {
-  background-color: #171722; }
-
-.nav li a:active {
-  background-color: whitesmoke;
-  color: #35355f; }
+  .nav li a {
+    display: inline-block;
+    color: whitesmoke;
+    text-align: left;
+    min-width: 100%;
+    padding: 10px 20px;
+    text-decoration: none; }
+    .nav li a a:hover, .nav li a .dropdown:hover .dropbtn {
+      background-color: #171722; }
+    .nav li a a:active {
+      background-color: whitesmoke;
+      color: #35355f; }
 
 .dropdown {
   position: relative;
@@ -66,9 +63,8 @@ header {
   background-color: #35355f;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1; }
-
-.dropdown-content a {
-  width: auto; }
+  .dropdown-content .dropdown-content a {
+    width: auto; }
 
 .dropdown:hover .dropdown-content {
   display: block; }
@@ -128,20 +124,7 @@ tr:nth-child(even) {
   color: whitesmoke; }
 
 /* ========== FORMS ============= */
-input[type=text], textarea, input[type=date] {
-  width: 100%;
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: whitesmoke;
-  box-sizing: border-box; }
-
-input[type=text]:focus, textarea:focus {
-  border: 3px solid #555;
-  resize: none; }
-
-select {
+select, input[type=text], textarea, input[type=date], input[type=button], input[type=submit] {
   width: 100%;
   padding: 10px 20px;
   margin: 10px;
@@ -149,14 +132,17 @@ select {
   border-radius: 4px;
   background-color: whitesmoke; }
 
+input[type=text], textarea, input[type=date] {
+  box-sizing: border-box; }
+
+input[type=text]:focus, textarea:focus {
+  border: 3px solid #555;
+  resize: none; }
+
 input[type=button], input[type=submit] {
   background-color: #35355f;
   color: whitesmoke;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
   text-decoration: none;
-  margin: 10px;
   cursor: pointer; }
 
 input[type=radio] {
