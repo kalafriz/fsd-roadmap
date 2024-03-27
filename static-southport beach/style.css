@@ -1,60 +1,70 @@
 /* ========= GRID ========== */
 .left, .right {
   float: left;
-  width: 20%; }
+  width: 20%;
+}
 
 .main {
   float: left;
-  width: 60%; }
+  width: 60%;
+}
 
 @media screen and (max-width: 800px) {
   .left, .main, .right {
-    width: 100%;
-    /* The width is 100%, when the viewport is 800px or smaller */ }
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
   input, textarea {
-    width: 100%; } }
-
+    width: 100%;
+  }
+}
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* ======= HEADER + NAV =======*/
 header {
   display: block;
-  padding: 0.5%; }
+  padding: 0.5%;
+}
 
 .header {
-  background-image: url(https://images.squarespace-cdn.com/content/v1/5e723e2e154006011f844f32/1593010720809-G7DT22V54GNBJQA8KKZE/EF_Five+Beach+Bike+Tour_Southport+Beach_6P3A4390.jpg); }
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5e723e2e154006011f844f32/1593010720809-G7DT22V54GNBJQA8KKZE/EF_Five+Beach+Bike+Tour_Southport+Beach_6P3A4390.jpg);
+}
 
 .nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flow-root;
-  background-color: #35355f;
-  padding-left: 2%; }
+  background-color: rgb(53, 53, 95);
+  padding-left: 2%;
+}
 
 .nav li {
-  float: left; }
-  .nav li a {
-    display: inline-block;
-    color: whitesmoke;
-    text-align: left;
-    min-width: 100%;
-    padding: 10px 20px;
-    text-decoration: none; }
-    .nav li a a:hover, .nav li a .dropdown:hover .dropbtn {
-      background-color: #171722; }
-    .nav li a a:active {
-      background-color: whitesmoke;
-      color: #35355f; }
+  float: left;
+}
+.nav li a {
+  display: inline-block;
+  color: whitesmoke;
+  text-align: left;
+  min-width: 100%;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.nav li a a:hover, .nav li a .dropdown:hover .dropbtn {
+  background-color: rgb(23, 23, 34);
+}
+.nav li a a:active {
+  background-color: whitesmoke;
+  color: #35355f;
+}
 
 .dropdown {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .dropdown-content {
   display: none;
@@ -62,25 +72,31 @@ header {
   text-align: left;
   background-color: #35355f;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1; }
-  .dropdown-content .dropdown-content a {
-    width: auto; }
+  z-index: 1;
+}
+.dropdown-content .dropdown-content a {
+  width: auto;
+}
 
 .dropdown:hover .dropdown-content {
-  display: block; }
+  display: block;
+}
 
 /* ========= MAIN =========== */
 body {
-  background-color: #9daec9; }
+  background-color: #9daec9;
+}
 
 h1 {
   text-align: center;
-  font-family: 'Playfair Display', 'Georgia';
+  font-family: "Playfair Display", "Georgia";
   color: whitesmoke;
-  font-size: 5vw; }
+  font-size: 5vw;
+}
 
 .organism-container {
-  display: flex; }
+  display: flex;
+}
 
 div.organism {
   background-color: whitesmoke;
@@ -90,60 +106,73 @@ div.organism {
   width: 20%;
   border-radius: 20px;
   overflow: hidden;
-  margin: 1%; }
+  margin: 1%;
+}
 
 div.organism:hover {
   transform: scale(1.1, 1.1);
-  transition: .05s;
-  transition-timing-function: ease-in; }
+  transition: 0.05s;
+  transition-timing-function: ease-in;
+}
 
 .organism h4 {
   text-align: center;
-  font-family: 'Georgia';
-  margin-top: 10px; }
+  font-family: "Georgia";
+  margin-top: 10px;
+}
 
 .organism p {
-  font-family: 'Verdana'; }
+  font-family: "Verdana";
+}
 
 .organism img {
   display: block;
   margin: auto;
   padding-top: 20px;
-  width: 90%; }
+  width: 90%;
+}
 
 table {
   width: 70%;
-  margin: auto; }
+  margin: auto;
+}
 
 th, td {
   border-bottom: 1px solid black;
-  padding: 10px; }
+  padding: 10px;
+}
 
 tr:nth-child(even) {
   background-color: #657ba0;
-  color: whitesmoke; }
+  color: whitesmoke;
+}
 
 /* ========== FORMS ============= */
-select, input[type=text], textarea, input[type=date], input[type=button], input[type=submit] {
+input[type=button], input[type=submit], input[type=text], textarea, input[type=date], select {
   width: 100%;
   padding: 10px 20px;
   margin: 10px;
   border: none;
   border-radius: 4px;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+}
 
 input[type=text], textarea, input[type=date] {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 input[type=text]:focus, textarea:focus {
   border: 3px solid #555;
-  resize: none; }
+  resize: none;
+}
 
 input[type=button], input[type=submit] {
   background-color: #35355f;
   color: whitesmoke;
   text-decoration: none;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 input[type=radio] {
-  margin: 10px; }
+  margin: 10px;
+}/*# sourceMappingURL=style.css.map */
