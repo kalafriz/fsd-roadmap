@@ -1,3 +1,15 @@
+
+/* ========== FONTS + COLORS ==========*/
+$background: #1b2c18;
+$logo-font: 84px  "VT323", Courier;
+$h-font: 32px bold "Ubuntu", Verdana;
+$dark-accent: #cfa721;
+$light-accent: #a9b2b9;
+$ulight-accent: whitesmoke;
+$p-font: 18px "Source Sans 3", Tahoma;
+$p-color:#888;
+$line-height: 44px;
+
 /*
   ============ GRID =================
 */
@@ -24,6 +36,21 @@
 }.grid, .col-1-3, .col-2-3{
     padding: 0 15px;
 }
+%row{
+    min-width: 960px;
+}
+.row{
+    @extend %row;
+    background: $ulight-accent;
+    padding: 66px 0 44px 0;
+}.row-alt{
+    @extend %row;
+        background: #cbe2c1;
+    background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+    background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+    background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+    padding: 44px 0 22px 0;
+}
 
 h1, h2, h3, h4, h5, p{
     margin-bottom: 20px;
@@ -34,9 +61,19 @@ h1, h2, h3, h4, h5, p{
     border-radius: 5%;
     display: inline-block;
     margin: 0;
+    cursor: pointer;
+    color: $ulight-accent;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin:0;
+    text-transform: uppercase;
 }.btn-alt{
     border: 1px solid #dfe2e5;
     padding: 10px 30px;
+    &:hover{
+        background: $ulight-accent;
+        color: $dark-accent;
+    }
 }
 
 
@@ -57,19 +94,158 @@ h1, h2, h3, h4, h5, p{
   ============ HOME =================
 */
 .hero{
+    color: $ulight-accent;
+    line-height: $line-height;
     padding: 22px 80px 66px 80px;
+    text-align: center;
+}
+.lead{
+    text-align: center;
+    p{
+        font-size: 21px;
+        line-height: 33px;
+    }
+}
+body{
+    background: $background;
+    color: $p-color;
+    font: $p-font;
+}
+h1, h2, h3, h4 {
+    color: $dark-accent;
+    font: $h-font;
+}
+h1 {
+  font-size: 36px;
+  line-height: $line-height;
+}
+h2 {
+  font-size: 36px;
+  line-height: $line-height;
+}
+h3 {
+  font-size: 21px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+    color: $light-accent;
+    font-size: 14px;
+    font-weight: 400;
+}
+strong {
+  font-weight: 400;
+}
+cite, em {
+  font-style: italic;
+}
+ol, ul, li{
+    margin: 0;
+    padding: 0;
+}
+ol, ul{
+    list-style: none;
+}
+/* ========== LINKS ============= */
+a{
+    text-decoration: none;
+    color:$light-accent;
+    &:hover{
+        color:$dark-accent;
+    }
+}
+/* ============ NAVBAR ============ */
+.primary-nav{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.nav{
+    text-align: right;
+    li{
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: top;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
 }
 /*
   ============ PRIMARY HEADER/FOOTER =================
 */
 .logo{
+    font: $logo-font;
     float:left;
-    border-top: 4px solid #648880;
-    padding: 40 0 22 0px;
+    border-top: 4px solid $dark-accent;
+    line-height: $line-height;
+    padding: 40px 0 22px 0;
+    a{
+        text-decoration: none;}
+}
+.tagline{
+    margin: 66px 0 22px 0;
+    text-align: right;
 }
 .primary-footer small{
     float: left;
+    font-weight: 400;
 }.primary-footer{
+    color: $dark-accent;
+    font-size: 14px;
     padding-bottom: 44px;
     padding-top: 44px;
+}
+.primary-header a, .primary-footer a{
+    color: $ulight-accent;
+    &:hover{
+        color: $dark-accent;
+    }
+}
+/* ======== TEASER COLS ==========*/
+.teaser{
+    h5{
+        text-transform: uppercase;
+    }
+    a:hover h3{
+        color:$light-accent;
+    }
+    img{
+        border-radius: 5%;
+        display: block;
+        margin-bottom: 22px;
+        height:200px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* ========= SPEAKERS ==========*/
+.speaker{
+    margin-bottom: 44px;
+}
+.speaker-info{
+    border: 1px solid $light-accent;
+    border-radius: 5%;
+    margin-top: 88px;
+    padding-bottom: 22px;
+    text-align: center;
+}.speaker-info img{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin: -66px 0 22px 0;
+    vertical-align: top;
+}
+/* =========== Venue ============== */
+.venue-space{
+    margin-bottom: 66px;
+}
+.venue-hotel {
+    margin-bottom: 22px;
+}
+.venue-map{
+    height: 264px;
 }
