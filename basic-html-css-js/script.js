@@ -27,6 +27,26 @@ let clone = structuredClone(user);
 clone.name = "Bob";
 alert(`${clone.name} is a structured clone of ${user.name}`)
 
+function Cat(name){
+    this.name = name;
+    this.isHungry = true;
+    this.feed = function(){
+        this.isHungry = false;
+        return this;
+    };
+}
+
+function cats(){
+    let name = prompt("Name your cat!", "Nameless");
+    let kitty = new Cat(name);
+    if(confirm(`Feed ${kitty.name}?`)){
+        kitty.feed();
+    }
+    let message = (kitty.isHungry) ? `${kitty.name} is hungry!`:
+    `${kitty.name} isn't hungry.`;
+    alert(message);
+}
+
 function countToThree(){
     let i=1;
     alert("Let's count to 3!");
@@ -34,6 +54,28 @@ function countToThree(){
         alert(i);
         i++;
     }
+}
+
+
+function Calculator() {
+    this.read = function(){
+        this.x = prompt('x=?',0);
+        this.y = prompt('y=?',0);
+    };
+    this.sum = function(){
+        return parseInt(this.x) + parseInt(this.y);
+    };
+    this.mul = function(){
+        return this.x*this.y;
+    };
+}
+
+function calcDemo(){
+    let calculator = new Calculator();
+    calculator.read();
+    alert(`sum = ${calculator.sum()}`);
+    alert(`product = ${calculator.mul()}`);
+
 }
 
 function removeFancy(){
