@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "dev": "npx live-server",
+    "sass": "node-sass sass/style.scss css/style.css",
+    "dev:sass": "npm-run-all --parallel sass dev"
+  },
   "dependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0",
+    "sass": "^1.72.0"
   }
 }
