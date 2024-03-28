@@ -1,55 +1,64 @@
 :root {
   --primary-color: #e50914;
-  --primary-color-hover: #8b0007; }
+  --primary-color-hover: #8b0007;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   font-family: "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
   background: black;
-  color: #999; }
+  color: #999;
+}
 
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 h1,
 h2,
 h3,
 h4 {
-  color: white; }
+  color: white;
+}
 
 a {
   color: white;
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 p {
-  margin: 0.5rem 0; }
+  margin: 0.5rem 0;
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 .hero {
   width: 100%;
   height: 93vh;
   position: relative;
-  background: url("../img/background.jpg") no-repeat center center/cover; }
-  .hero h1 {
+  background: url("../img/background.jpg") no-repeat center center/cover;
+  h1 {
     font-weight: 700;
     font-size: 5.2rem;
     line-height: 1.1;
-    margin: 0 0 2rem; }
-  .hero p {
+    margin: 0 0 2rem;
+  }
+  p {
     text-transform: uppercase;
     color: white;
     font-weight: 400;
     font-size: 1.9rem;
     line-height: 1.25;
-    margin: 0 0 2rem; }
-  .hero::after {
+    margin: 0 0 2rem;
+  }
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -58,26 +67,27 @@ img {
     height: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: inset 120px 100px 250px black, inset -120px -100px 250px black; }
-
+    box-shadow: inset 120px 100px 250px black, inset -120px -100px 250px black;
+  }
+}
 .hero-top {
   position: relative;
   height: 90px;
-  z-index: 2; }
-
+  z-index: 2;
+}
 .hero-top .logo {
   width: 170px;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); }
-
+  transform: translate(-50%, -50%);
+}
 .hero-top a {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(-50%, -50%); }
-
+  transform: translate(-50%, -50%);
+}
 .hero-content {
   position: relative;
   margin: auto;
@@ -86,7 +96,8 @@ img {
   align-items: center;
   text-align: center;
   margin-top: 9rem;
-  z-index: 2; }
+  z-index: 2;
+}
 
 /* =========== BUTTONS ==================*/
 .btn {
@@ -101,19 +112,24 @@ img {
   margin-right: 0.5rem;
   outline: none;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  border-radius: 2px; }
-  .btn:hover {
-    background: var(--primary-color-hover); }
-
+  border-radius: 2px;
+  &:hover {
+    background: var(--primary-color-hover);
+  }
+}
 .btn-rounded {
-  border-radius: 5px; }
-
-.btn-xl, .btn-m {
+  border-radius: 5px;
+}
+.btn-xl {
   font-size: 2rem;
   padding: 1.5rem 2.1rem;
-  text-transform: uppercase; }
-
+  text-transform: uppercase;
+}
 .btn-l {
   font-size: 1rem;
   padding: 0.8rem 1.3rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
+.btn-m {
+  @extend .btn-xl;
+}
