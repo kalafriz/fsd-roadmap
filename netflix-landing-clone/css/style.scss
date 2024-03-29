@@ -168,10 +168,22 @@ img {
     }
   }
 }
+
+/* ======== TAB SELECTION ==========*/
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
 .tab-border {
   border-bottom: var(--primary-color) 4px solid;
 }
-.tab-content-1 {
+/* ======== TAB FORMATTING =========*/
+.tab-1-content {
   padding: 3rem 0;
   background: black;
   color: white;
@@ -253,7 +265,7 @@ footer {
   margin-right: 0.5rem;
   outline: none;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  border-radius: 2px;
+  border-radius: 5px;
   &:hover {
     background: var(--primary-color-hover);
   }
