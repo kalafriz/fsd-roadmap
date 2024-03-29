@@ -17,6 +17,7 @@ body {
 ul {
   list-style: none; }
 
+/* ============= TEXT STYLES ==============*/
 h1,
 h2,
 h3,
@@ -27,19 +28,47 @@ a {
   color: white;
   text-decoration: none; }
 
-p {
-  margin: 0.5rem 0; }
+p,
+table {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  font-family: "Helvetica"; }
+
+.text-xl {
+  font-size: 2rem;
+  margin-bottom: 1rem; }
+
+.text-l {
+  font-size: 1.3rem;
+  margin-bottom: 1rem; }
+
+.text-m {
+  font-size: 1rem;
+  margin-bottom: 1rem; }
 
 img {
   width: 100%; }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
   align-items: center;
   justify-content: center;
   text-align: center; }
+  .grid.g1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem; }
+  .grid.g2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem; }
+    .grid.g2.g2-1 {
+      grid-template-columns: 2fr 1fr;
+      text-align: left; }
+  .grid.g3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem; }
+  .grid.g4 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem; }
 
 .container {
   max-width: 70%;
@@ -47,6 +76,7 @@ img {
   overflow: hidden;
   padding: 0 2rem; }
 
+/* ============= HERO ================*/
 .hero {
   width: 100%;
   height: 93vh;
@@ -117,6 +147,63 @@ img {
       color: white;
       cursor: pointer; }
 
+.tab-border {
+  border-bottom: var(--primary-color) 4px solid; }
+
+.tab-content-1 {
+  padding: 3rem 0;
+  background: black;
+  color: white;
+  text-align: left; }
+
+.tab-2-content {
+  margin: 3rem 0;
+  grid-gap: 2rem;
+  color: white; }
+  .tab-2-content .text-dark {
+    color: #999; }
+
+.tab-3-content.g2 {
+  margin: 3rem 5rem 2rem 5rem; }
+
+.tab-3-content.g1 {
+  margin: 0 5rem 2rem 5rem; }
+
+table {
+  text-align: center;
+  font-weight: bold;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+table thead tr th {
+  text-transform: uppercase;
+  padding: 0.8rem; }
+
+table tbody tr td {
+  color: #999;
+  padding: 0.8rem 1.2rem; }
+  table tbody tr td:first-child {
+    text-align: left;
+    font-weight: 400; }
+
+table tbody tr:nth-child(odd) {
+  background: #222; }
+
+/* ========== FOOTER ============*/
+footer {
+  max-width: 75%;
+  margin: 1rem auto;
+  overflow: auto; }
+  footer,
+  footer a {
+    color: #999;
+    font-size: 0.8rem; }
+  footer p {
+    margin-bottom: 1.5rem; }
+  footer li {
+    text-align: left;
+    line-height: 1.9; }
+
 /* =========== BUTTONS ==================*/
 .btn {
   display: inline-block;
@@ -137,7 +224,7 @@ img {
 .btn-rounded {
   border-radius: 5px; }
 
-.btn-xl, .btn-m {
+.btn-xl {
   font-size: 2rem;
   padding: 1.5rem 2.1rem;
   text-transform: uppercase; }
@@ -145,4 +232,9 @@ img {
 .btn-l {
   font-size: 1rem;
   padding: 0.8rem 1.3rem;
+  text-transform: uppercase; }
+
+.btn-m {
+  font-size: 0.5rem;
+  padding: 0.5rem 1rem;
   text-transform: uppercase; }

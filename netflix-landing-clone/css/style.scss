@@ -21,6 +21,7 @@ ul {
   list-style: none;
 }
 
+/* ============= TEXT STYLES ==============*/
 h1,
 h2,
 h3,
@@ -32,8 +33,23 @@ a {
   color: white;
   text-decoration: none;
 }
-p {
+p,
+table {
+  font-size: 0.9rem;
   margin: 0.5rem 0;
+  font-family: "Helvetica";
+}
+.text-xl {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.text-l {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.text-m {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 img {
@@ -41,18 +57,39 @@ img {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
   align-items: center;
   justify-content: center;
   text-align: center;
+  &.g1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  &.g2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    &.g2-1 {
+      grid-template-columns: 2fr 1fr;
+      text-align: left;
+    }
+  }
+
+  &.g3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  &.g4 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
 }
+
 .container {
   max-width: 70%;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
 }
+/* ============= HERO ================*/
 .hero {
   width: 100%;
   height: 93vh;
@@ -130,6 +167,72 @@ img {
     }
   }
 }
+.tab-border {
+  border-bottom: var(--primary-color) 4px solid;
+}
+.tab-content-1 {
+  padding: 3rem 0;
+  background: black;
+  color: white;
+  text-align: left;
+}
+.tab-2-content {
+  margin: 3rem 0;
+  grid-gap: 2rem;
+  color: white;
+  .text-dark {
+    color: #999;
+  }
+}
+.tab-3-content {
+  &.g2 {
+    margin: 3rem 5rem 2rem 5rem;
+  }
+  &.g1 {
+    margin: 0 5rem 2rem 5rem;
+  }
+}
+table {
+  text-align: center;
+  font-weight: bold;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table thead tr th {
+  text-transform: uppercase;
+  padding: 0.8rem;
+}
+table tbody tr td {
+  color: #999;
+  padding: 0.8rem 1.2rem;
+  &:first-child {
+    text-align: left;
+    font-weight: 400;
+  }
+}
+table tbody tr:nth-child(odd) {
+  background: #222;
+}
+
+/* ========== FOOTER ============*/
+footer {
+  max-width: 75%;
+  margin: 1rem auto;
+  overflow: auto;
+
+  &,
+  a {
+    color: #999;
+    font-size: 0.8rem;
+  }
+  p {
+    margin-bottom: 1.5rem;
+  }
+  li {
+    text-align: left;
+    line-height: 1.9;
+  }
+}
 
 /* =========== BUTTONS ==================*/
 .btn {
@@ -163,5 +266,7 @@ img {
   text-transform: uppercase;
 }
 .btn-m {
-  @extend .btn-xl;
+  font-size: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
 }
