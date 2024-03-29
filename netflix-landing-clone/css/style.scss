@@ -60,6 +60,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
+  grid-auto-flow: row;
   &.g1 {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1rem;
@@ -274,4 +275,73 @@ footer {
   font-size: 0.5rem;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
+}
+
+/* ============= MEDIA QUERIES ===============*/
+@media (max-width: 960px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 80%;
+    padding: 0 1rem;
+  }
+  .hero {
+    height: 70vh;
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .hide-sm {
+    display: none;
+  }
+  .btn-xl {
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+  }
+  .text-xl {
+    font-size: 1.5rem;
+  }
+  .text-l {
+    font-size: 1.3rem;
+  }
+  .text-m {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 10px;
+  }
+  .grid.g1,
+  .grid.g2,
+  .grid.g3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero {
+    height: 40vh;
+    h1 {
+      font-size: 3rem;
+      line-height: 0.8;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    .logo {
+      max-width: 30%;
+    }
+    .hero-content {
+      margin: 2rem 1rem;
+    }
+  }
+  .tabs {
+    margin-bottom: 2rem;
+    .grid.g3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
