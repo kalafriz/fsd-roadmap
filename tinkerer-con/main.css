@@ -114,6 +114,10 @@ p {
   clear: both;
 }
 
+.clear {
+  clear: left;
+}
+
 /*
   ============ HOME =================
 */
@@ -238,16 +242,19 @@ a:hover {
   text-align: right;
 }
 
-.primary-footer small {
-  float: left;
-  font-weight: 400;
-}
-
 .primary-footer {
   color: #cfa721;
   font-size: 14px;
   padding-bottom: 44px;
   padding-top: 44px;
+}
+.primary-footer small {
+  float: left;
+  font-weight: 400;
+}
+.primary-footer .credit {
+  float: left;
+  padding: 0 0 0 50px;
 }
 
 .primary-header a,
