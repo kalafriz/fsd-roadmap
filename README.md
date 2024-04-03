@@ -5,3 +5,4 @@ This repo is for the mini-projects I have completed following the [**roadmap.sh*
 
 ### Completed Projects
 - [Netflix Landing Page Clone](https://kalafriz.github.io/fsd-roadmap/netflix-landing-clone/index.html) | HTML, CSS, JS ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/netflix-landing-clone))
+- [Convention Website](https://kalafriz.github.io/fsd-roadmap/tinkerer-con/index.html) | HTML, CSS ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/tinkerer-con))
