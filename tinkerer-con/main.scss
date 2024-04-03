@@ -284,6 +284,42 @@ a {
   margin: -66px 0 22px 0;
   vertical-align: top;
 }
+/* =========== Schedule =========== */
+table {
+  margin-bottom: 44px;
+  width: 100%;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+thead {
+  line-height: 44px;
+  th {
+    color: $background;
+    font-size: 24px;
+  }
+}
+th,
+td {
+  padding-bottom: 22px;
+  vertical-align: top;
+}
+th {
+  padding-right: 45px;
+  text-align: right;
+  width: 20%;
+}
+td {
+  width: 40%;
+}
+tbody th {
+  color: $background;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 22px;
+  text-transform: uppercase;
+}
+
 /* =========== Venue ============== */
 .venue-space {
   margin-bottom: 66px;
