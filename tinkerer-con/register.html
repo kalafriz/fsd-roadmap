@@ -64,8 +64,79 @@
 
     <!-------- REGISTRATION FORM ----->
 
-    <section class="row">
-      <div class="grid"></div>
+    <section class="row group">
+      <div class="grid">
+        <section class="col-2-3 float-left">
+          <h2>Purchase a Convention Pass</h2>
+          <h5>$99 per Pass</h5>
+
+          <p>
+            <strong
+              >This is a fictitious event. Do not enter any sensitive
+              information.
+            </strong>
+            Purchase your TinkerCon weekend pass using the form to the right.
+            Multiple passes may be purchased within the same order, so feel free
+            to bring a friend or two along. Once your order is finished
+            we&#8217;ll follow up and provide a receipt for your purchase. See
+            you soon!
+          </p>
+
+          <h4>Why Attend?</h4>
+
+          <ul class="why-attend">
+            <li>Over twenty world-class speakers</li>
+            <li>A weekend full of workshops and presentations</li>
+            <li>Hosted at the historic Metropolitan Pavillion</li>
+            <li>Fully catered by The Culinistas Catering Co.</li>
+          </ul>
+        </section>
+        <form class="col-1-3 register float-left" action="#" method="post">
+          <fieldset>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Full name" required />
+            </label>
+
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+            </label>
+
+            <label>
+              Number of Passes
+              <select name="quantity" required>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </label>
+
+            <label>
+              Comments
+              <textarea name="comments"></textarea>
+            </label>
+            <strong
+              >This is a fictitious event. Do not enter any sensitive
+              information. </strong
+            ><br />
+          </fieldset>
+
+          <input
+            class="btn btn-default"
+            type="submit"
+            name="submit"
+            value="Purchase"
+          />
+        </form>
+      </div>
     </section>
 
     <!------------------ FOOTER START ---------------------->
