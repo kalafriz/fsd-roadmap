@@ -2,6 +2,7 @@
 <html lang="en-US">
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src = "script.js" defer></script>
         <style>
             body {background-color: bisque;}
             p {color: #111}
@@ -22,7 +23,6 @@
         <script>
             alert("Hello, world!");
         </script>
-        <script src = "script.js"></script>
         <p class="fancy">And this is a paragraph.<br>With a line break.</p>
         <p>You can access <a href = "https://www.google.com/" target="_blank">Google with this link</a> in a new tab.</p>
         <img src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="This is a cat!" width="500" height="300">
@@ -38,6 +38,13 @@
                     Using the 
                         "pre" element.
         </pre>
+
+        <p>Put the cat in the box!</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 3px solid; height: 100px; width:400px;"></div>
+        <img id="drag1" draggable="true" ondragstart="drag(event)" height="69" src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png">
+        <br>
+        <button onclick="getLocation()">Give me my exact location!:</button>
+        <p id="demo"></p>
         <button onclick="countToThree()">Count to three!</button>
         <button onclick="removeFancy()">Remove fancy elements on this page</button><br>
         <button onclick="calcDemo()">Calculator</button>
