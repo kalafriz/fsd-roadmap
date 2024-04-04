@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #e50914;
+  --primary-color-hover: #8b0007;
+  --dark-color: #181616;
+  --light-color: whitesmoke;
+  --secondary-color: rgb(243, 209, 56);
+
+  --logo-font: "Graduate";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--dark-color);
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============= TEXT STYLES ==============*/
+h1,
+h2,
+h3,
+h4 {
+  color: var(--light-color);
+}
+
+a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+p,
+table {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  font-family: "Helvetica";
+}
+.text-xl {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.text-l {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.text-m {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*
+  ============ GRID =================
+*/
+
+.container {
+  display: flex;
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* ============ CLEARFIX ================= */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+}
+.clear {
+  clear: left;
+}
+/* =============================================== HEADER ============================================ */
+.header {
+  width: 100%;
+  background: var(--light-color);
+
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: center;
+  max-height: 15%;
+  max-width: 100%;
+  margin: auto;
+
+  img {
+    margin: 1rem;
+  }
+  p {
+    font-family: var(--logo-font);
+    color: var(--primary-color);
+  }
+}
+nav {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 10%;
+  width: 100%;
+  margin: auto;
+  ul {
+    display: flex;
+    li {
+      padding: 0.8rem;
+      margin: 0 0.8rem;
+    }
+  }
+  a {
+    color: var(--light-color);
+    font-weight: bold;
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+/* =============================================== BODY ============================================ */
+.hero {
+}
+.feed {
+  background: var(--dark-color);
+}
+/* =============================================== FOOTER ============================================ */
+.footer {
+  background: var(--light-color);
+  color: var(--dark-color);
+
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: center;
+  max-height: 15%;
+  width: 100%;
+  margin: auto;
+
+  a {
+    color: var(--dark-color);
+  }
+}
+/* ============= MEDIA QUERIES ===============*/
+@media (max-width: 960px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 80%;
+    padding: 0 1rem;
+  }
+  .hide-sm {
+    display: none;
+  }
+  .text-xl {
+    font-size: 3rem;
+  }
+  .text-l {
+    font-size: 1.3rem;
+  }
+  .text-m {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 10px;
+  }
+  .grid.g1,
+  .grid.g2,
+  .grid.g3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .text-xl {
+    font-size: 2.4rem;
+  }
+}
