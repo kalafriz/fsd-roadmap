@@ -59,6 +59,34 @@ table {
 /*
   ============ GRID =================
 */
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-auto-flow: row;
+  &.g1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  &.g2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    &.g2-1 {
+      grid-template-columns: 2fr 1fr;
+      text-align: left;
+    }
+  }
+
+  &.g3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  &.g4 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+}
 
 .container {
   display: flex;
@@ -131,9 +159,38 @@ nav {
 }
 /* =============================================== BODY ============================================ */
 .hero {
+  width: 100%;
+  background-image: url(img/hero.jpg);
+  padding: 4rem;
+  margin-bottom: 4rem;
+}
+.feed-head {
+  text-align: center;
 }
 .feed {
-  background: var(--dark-color);
+  width: 100%;
+  thead,
+  tfoot {
+    display: none;
+  }
+  table {
+    background: none !important;
+    border: none !important;
+  }
+  tr {
+    background: var(--light-color);
+    color: var(--dark-color);
+    width: 80%;
+    display: block;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin: 1.5rem auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+  }
+  td {
+    display: block;
+  }
 }
 /* =============================================== FOOTER ============================================ */
 .footer {
