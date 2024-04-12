@@ -1,0 +1,28 @@
+.bg-grey-900 {
+  background-color: #121826;
+}
+.text-white {
+  color: whitesmoke;
+}
+body {
+  margin: 0;
+}
+
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.hidden {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
