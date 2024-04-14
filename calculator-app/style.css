@@ -1,8 +1,13 @@
 * {
-  font-family: "Verdana", monospace;
+  font-family: "Helvetica Neue", "Helvetica", "Verdana", monospace;
+}
+.calculator {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .display {
-  font-size: 3rem;
+  font-size: 3.4rem;
   margin: 0.4rem 0.2rem;
   color: white;
   text-align: right;
@@ -10,25 +15,35 @@
 }
 
 button {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   height: 4rem;
   width: 4rem;
   border-radius: 100%;
   border: 0;
   margin: 0.2rem;
+  transition: 0.3s;
 }
 
 button.light {
   background-color: grey;
   color: black;
 }
+button.light:hover {
+  background-color: rgb(201, 201, 201);
+}
 button.digit {
   background-color: rgb(51, 51, 51);
   color: white;
 }
+button.digit:hover {
+  background-color: rgb(97, 97, 97);
+}
 button.operator {
   background-color: orange;
   color: white;
+}
+button.operator:hover {
+  background-color: rgb(255, 202, 103);
 }
 
 button.wide {
