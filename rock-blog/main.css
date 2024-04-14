@@ -92,10 +92,10 @@ table {
 
 .container {
   display: flex;
-  max-width: 70%;
+  max-width: 90%;
   margin: auto;
   overflow: hidden;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /* ============ CLEARFIX ================= */
@@ -225,7 +225,7 @@ nav a:hover {
     font-size: 14px;
   }
   .container {
-    max-width: 80%;
+    max-width: 90%;
     padding: 0 1rem;
   }
   .hide-sm {
