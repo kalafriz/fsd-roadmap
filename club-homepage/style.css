@@ -1,5 +1,5 @@
-.bg-grey-900 {
-  background-color: #121826;
+.bg-green-dark {
+  background-color: #101a0f;
 }
 .text-white {
   color: whitesmoke;
@@ -31,4 +31,18 @@ body {
 }
 .items-center {
   align-items: center;
+}
+.m-8 {
+  margin: 8px;
+}
+.p-18 {
+  padding: 18px;
+}
+
+.nav a {
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  font-family: "Sedan", "Times New Roman", Times, serif;
+  font-size: large;
 }
