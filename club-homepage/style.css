@@ -1,6 +1,9 @@
 .bg-green-dark {
   background-color: #101a0f;
 }
+.bg-accent-bright {
+  background-color: goldenrod;
+}
 .text-white {
   color: whitesmoke;
 }
@@ -41,10 +44,43 @@ body {
   padding: 18px;
 }
 
-.nav a {
-  padding: 8px 16px;
+.logo-text {
+  padding: 8px 1vw;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: "IM Fell English SC", "Times New Roman", Times, serif;
+  text-shadow: 0 2px 5px #1a264b;
+}
+.nav a,
+.nav button {
+  padding: 8px 1.2vw;
   color: white;
   text-decoration: none;
   font-family: "Sedan", "Times New Roman", Times, serif;
-  font-size: large;
+  font-size: 1.5vw;
+}
+.nav a {
+  text-shadow: 0 2px 5px #1a264b;
+}
+.nav button {
+  border: 0;
+  border-radius: 5px;
+  margin-left: 16px;
+}
+
+.hero img {
+  top: -100px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-2 {
+  z-index: 2;
 }

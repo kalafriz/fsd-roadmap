@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Sedan:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,28 +13,46 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-green-dark">
     <header
-      class="bg-green-dark flex justify-between"
+      class="flex justify-between relative z-2"
       style="padding: 18px 12px"
     >
-      <div class="flex justify-center items-center nav">
-        <img
-          src="logo.png"
-          alt="Norwich Community Garden Club Logo"
-          width="50px"
+      <div class="flex justify-center items-center">
+        <div
+          class="flex justify-center items-center"
           style="margin-right: 50px"
-        />
-        <a href="">Membership</a>
-        <a href="">Events</a>
-        <a href="">Blog</a>
-        <a href="">Forum</a>
+        >
+          <img
+            src="logo.png"
+            alt="Norwich Community Garden Club Logo"
+            width="50px"
+          />
+          <a href="" class="logo-text">Norwich Gardening Society</a>
+        </div>
+        <div class="nav">
+          <a href="">Membership</a>
+          <a href="">Events</a>
+          <a href="">Blog</a>
+          <a href="">Forum</a>
+        </div>
       </div>
       <div class="flex justify-center items-center nav">
         <a href="" class="text-white">Log In</a>
-        <button style="margin-right: 16px">Become a Member</button>
+        <a href=""
+          ><button class="bg-accent-bright" style="margin-right: 16px">
+            Become a Member
+          </button></a
+        >
       </div>
     </header>
+    <section class="hero">
+      <img
+        src="img/garden.jpg"
+        alt="Community Gardens of Norwich Gardening Society"
+        class="w-full relative"
+      />
+    </section>
   </body>
 </html>
 <footer>
