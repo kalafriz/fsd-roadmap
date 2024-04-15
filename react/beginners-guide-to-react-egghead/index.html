@@ -7,20 +7,21 @@
   <script type="text/babel">
     const rootElement = document.getElementById("root");
 
-    function SayHello({ firsName, lastName }) {
+    function CharacterCount({ text }) {
       return (
         <div>
-          Hello {firsName} {lastName}!
+          {`The text "${text}" has `}{" "}
+          {text.length ? <strong>text.length</strong> : "No"} characters
         </div>
       );
     }
 
-    SayHello.propTypes = {
-      firstName: PropTypes.string.isRequired,
-      lastName: PropTypes.string.isRequired,
-    };
-
-    const element = <SayHello firstName={false} />;
+    const element = (
+      <>
+        <CharacterCount text="Hello World" />
+        <CharacterCount text="" />
+      </>
+    );
     ReactDOM.render(element, rootElement);
   </script>
 </body>
