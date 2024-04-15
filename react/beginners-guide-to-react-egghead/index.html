@@ -3,18 +3,24 @@
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
   <script type="text/babel">
     const rootElement = document.getElementById("root");
-    const Message = (props) => <div className="Message">{props.children}</div>;
-    const element = (
-      <>
-        <Message>
-          Hello World
-          <span>Hi there</span>
-        </Message>
-        <Message children="Goodbye World" />
-      </>
-    );
+
+    function SayHello({ firsName, lastName }) {
+      return (
+        <div>
+          Hello {firsName} {lastName}!
+        </div>
+      );
+    }
+
+    SayHello.propTypes = {
+      firstName: PropTypes.string.isRequired,
+      lastName: PropTypes.string.isRequired,
+    };
+
+    const element = <SayHello firstName={false} />;
     ReactDOM.render(element, rootElement);
   </script>
 </body>
