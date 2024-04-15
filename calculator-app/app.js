@@ -2,7 +2,6 @@ let total = 0;
 let myNum = "";
 
 const inputDisplay = document.getElementById("input");
-inputDisplay.innerHTML = "12345";
 
 function updateDisplay() {
   inputDisplay.innerHTML = myNum;
@@ -13,8 +12,7 @@ function operator(op) {
 }
 
 function digit(x) {
-  alert(x);
-  myNum = x;
+  myNum = myNum.length < 9 ? myNum.concat(x) : myNum;
   updateDisplay();
 }
 
