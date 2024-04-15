@@ -11,33 +11,33 @@
     <div class="calculator">
       <div class="display">00</div>
       <section class="flex button-row">
-        <button class="light">AC</button>
-        <button class="light">+/-</button>
-        <button class="light">%</button>
-        <button class="operator">/</button>
+        <button class="light" onclick="clr()">AC</button>
+        <button class="light" onclick="sign()">+/-</button>
+        <button class="light" onclick="togglePercent()">%</button>
+        <button class="operator" onclick="operator('/')">/</button>
       </section>
       <section class="flex button-row">
-        <button class="digit">7</button>
-        <button class="digit">8</button>
-        <button class="digit">9</button>
-        <button class="operator">x</button>
+        <button class="digit" onclick="digit('7')">7</button>
+        <button class="digit" onclick="digit('8')">8</button>
+        <button class="digit" onclick="digit('9')">9</button>
+        <button class="operator" onclick="operator('x')">x</button>
       </section>
       <section class="flex button-row">
-        <button class="digit">4</button>
-        <button class="digit">5</button>
-        <button class="digit">6</button>
-        <button class="operator">-</button>
+        <button class="digit" onclick="digit('4')">4</button>
+        <button class="digit" onclick="digit('5')">5</button>
+        <button class="digit" onclick="digit('6')">6</button>
+        <button class="operator" onclick="operator('-')">-</button>
       </section>
       <section class="flex button-row">
-        <button class="digit">1</button>
-        <button class="digit">2</button>
-        <button class="digit">3</button>
-        <button class="operator">+</button>
+        <button class="digit" onclick="digit('1')">1</button>
+        <button class="digit" onclick="digit('2')">2</button>
+        <button class="digit" onclick="digit('3')">3</button>
+        <button class="operator" onclick="operator('+')">+</button>
       </section>
       <section class="flex button-row">
-        <button class="digit wide">0</button>
-        <button class="digit">.</button>
-        <button class="operator">=</button>
+        <button class="digit wide" onclick="digit('0')">0</button>
+        <button class="digit" onClick="decimal()">.</button>
+        <button class="operator" onclick="eval()">=</button>
       </section>
     </div>
   </body>
