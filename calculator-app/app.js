@@ -16,7 +16,14 @@ function showDebug() {
   operatorDebug.innerHTML = myOp;
 }
 
+function eNotation(x) {
+  s = Number.parseFloat(x).toExponential(5);
+  s = s.replace("+", "");
+  return s;
+}
+
 function updateDisplay(x) {
+  x = x <= "999999999" ? x : eNotation(x);
   inputDisplay.innerHTML = x ? x : "0";
   showDebug();
 }
@@ -81,9 +88,11 @@ function digit(x) {
 function eval() {
   if (myOp) {
     updateTotal(doOp(myOp, total, myNum));
+    console.log(String.valueOf(total));
     updateDisplay(total);
   } else {
     updateTotal(myNum);
+    console.log(toString(total));
     updateDisplay(total);
   }
 }
