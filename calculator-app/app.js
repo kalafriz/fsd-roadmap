@@ -1,6 +1,7 @@
 let total = 0;
 let myNum = "";
 let myOp = "";
+let showingTotal = false;
 
 let allClear = true;
 
@@ -11,9 +12,9 @@ const currentDebug = document.getElementById("current-display");
 const totalDebug = document.getElementById("total-display");
 const operatorDebug = document.getElementById("operator-display");
 function showDebug() {
-  currentDebug.innerHTML = myNum;
-  totalDebug.innerHTML = total;
-  operatorDebug.innerHTML = myOp;
+  currentDebug.innerHTML = `x: ${myNum}`;
+  totalDebug.innerHTML = `total: ${total}`;
+  operatorDebug.innerHTML = `opeartor : ${myOp}`;
 }
 
 function eNotation(x) {
@@ -28,16 +29,19 @@ function updateDisplay(x) {
   showDebug();
 }
 
-function updateNum(x, doUpdate = true) {
+function updateNum(x, doDisplay = true) {
   myNum = x;
-  if (doUpdate) {
+  if (doDisplay) {
     updateDisplay(parseFloat(myNum ? myNum : 0));
+    showingTotal = false;
   }
+  showDebug();
 }
 
 function updateTotal(x) {
   total = x ? x : 0;
   //alert(`total = ${total}`);
+  showDebug();
 }
 
 function updateClear(state) {
@@ -50,7 +54,11 @@ function updateOp(op) {
 }
 
 function operator(op) {
-  eval();
+  if (showingTotal) {
+    updateOp("");
+  } else {
+    eval();
+  }
   updateOp(op);
   updateNum("", false);
 }
@@ -88,13 +96,11 @@ function digit(x) {
 function eval() {
   if (myOp) {
     updateTotal(doOp(myOp, total, myNum));
-    console.log(String.valueOf(total));
-    updateDisplay(total);
   } else {
     updateTotal(myNum);
-    console.log(toString(total));
-    updateDisplay(total);
   }
+  updateDisplay(total);
+  showingTotal = true;
 }
 
 function clr() {
@@ -109,7 +115,15 @@ function clr() {
 }
 
 function sign() {
-  alert("+/-");
+  if (showingTotal) {
+    updateTotal(-1 * total);
+    updateDisplay(total);
+    showingTotal = true;
+  } else if (myNum.charAt(0) === `-`) {
+    updateNum(myNum.slice(1));
+  } else {
+    updateNum(myNum ? "-".concat(myNum) : "-0");
+  }
 }
 
 function percent() {
