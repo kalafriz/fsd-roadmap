@@ -7,18 +7,30 @@ let allClear = true;
 const inputDisplay = document.getElementById("input");
 const clearBtn = document.getElementById("clear-button");
 
-function updateDisplay(x) {
-  inputDisplay.innerHTML = x ? x : "0";
+const currentDebug = document.getElementById("current-display");
+const totalDebug = document.getElementById("total-display");
+const operatorDebug = document.getElementById("operator-display");
+function showDebug() {
+  currentDebug.innerHTML = myNum;
+  totalDebug.innerHTML = total;
+  operatorDebug.innerHTML = myOp;
 }
 
-function updateNum(x) {
+function updateDisplay(x) {
+  inputDisplay.innerHTML = x ? x : "0";
+  showDebug();
+}
+
+function updateNum(x, doUpdate = true) {
   myNum = x;
-  updateDisplay(myNum);
+  if (doUpdate) {
+    updateDisplay(myNum);
+  }
 }
 
 function updateTotal(x) {
-  total = x;
-  alert(`total = ${total}`);
+  total = x ? x : 0;
+  //alert(`total = ${total}`);
 }
 
 function updateClear(state) {
@@ -33,7 +45,7 @@ function updateOp(op) {
 function operator(op) {
   eval();
   updateOp(op);
-  myNum = "";
+  updateNum("", false);
 }
 
 function doOp(op, t, n) {
@@ -57,7 +69,7 @@ function doOp(op, t, n) {
       console.log("Unknown operator!");
   }
 
-  alert(`Result = ${res}`);
+  //alert(`Result = ${res}`);
   return res;
 }
 
@@ -80,6 +92,7 @@ function clr() {
   if (allClear) {
     updateTotal(0);
     updateNum("");
+    updateOp("");
   } else {
     updateNum("");
     updateClear(true);
