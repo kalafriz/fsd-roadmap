@@ -4,13 +4,44 @@
 .bg-accent-bright {
   background-color: goldenrod;
 }
+.color-accent-bright {
+  color: rgb(236, 124, 225);
+}
 .text-white {
   color: whitesmoke;
+}
+.text-dark {
+  color: #101a0f;
+}
+.text-shadow {
+  text-shadow: 0 2px 8px #1a264b;
+}
+.text-justify {
+  text-align: justify;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.8vw;
+  font-family: "IM Fell English SC", "Times New Roman", Times, serif;
+  text-shadow: 0 2px 5px #1a264b;
+}
+
+button {
+  padding: 8px 1.2vw;
+  color: white;
+  text-decoration: none;
+  font-family: "Sedan", "Times New Roman", Times, serif;
+  font-size: 1.5vw;
+  border: 0;
+  border-radius: 5px;
 }
 
 .block {
@@ -83,7 +114,9 @@ body {
 .relative {
   position: relative;
 }
-
+.absolute {
+  position: absolute;
+}
 .z-2 {
   z-index: 2;
 }
