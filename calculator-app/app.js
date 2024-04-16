@@ -23,7 +23,7 @@ function eNotation(x) {
 }
 
 function updateDisplay(x) {
-  x = x <= "999999999" ? x : eNotation(x);
+  x = x.toString().length > 9 ? eNotation(x) : x;
   inputDisplay.innerHTML = x ? x : "0";
   showDebug();
 }
@@ -31,7 +31,7 @@ function updateDisplay(x) {
 function updateNum(x, doUpdate = true) {
   myNum = x;
   if (doUpdate) {
-    updateDisplay(myNum);
+    updateDisplay(parseFloat(myNum ? myNum : 0));
   }
 }
 
@@ -112,8 +112,8 @@ function sign() {
   alert("+/-");
 }
 
-function togglePercent() {
-  alert("percent toggle");
+function percent() {
+  updateNum(myNum ? parseFloat(myNum) / 100 : "");
 }
 
 function decimal() {
