@@ -131,5 +131,7 @@ function percent() {
 }
 
 function decimal() {
-  alert("decimal");
+  if (!myNum.includes(".")) {
+    updateNum(myNum.concat("."));
+  }
 }
