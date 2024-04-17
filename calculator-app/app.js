@@ -4,6 +4,7 @@ let myOp = "";
 let showingTotal = false;
 
 let allClear = true;
+let showingDebug = false;
 
 const inputDisplay = document.getElementById("input");
 const clearBtn = document.getElementById("clear-button");
@@ -11,7 +12,17 @@ const clearBtn = document.getElementById("clear-button");
 const currentDebug = document.getElementById("current-display");
 const totalDebug = document.getElementById("total-display");
 const operatorDebug = document.getElementById("operator-display");
-function showDebug() {
+
+const debug = document.getElementById("debug");
+
+function toggleDebug() {
+  showingDebug
+    ? (debug.style.display = "none")
+    : (debug.style.display = "inline-block");
+  showingDebug = !showingDebug;
+}
+
+function updateDebug() {
   currentDebug.innerHTML = `x: ${myNum}`;
   totalDebug.innerHTML = `total: ${total}`;
   operatorDebug.innerHTML = `opeartor : ${myOp}`;
@@ -26,7 +37,7 @@ function eNotation(x) {
 function updateDisplay(x) {
   x = x.toString().length > 9 ? eNotation(x) : x;
   inputDisplay.innerHTML = x ? x : "0";
-  showDebug();
+  updateDebug();
 }
 
 function updateNum(x, doDisplay = true) {
@@ -35,13 +46,13 @@ function updateNum(x, doDisplay = true) {
     updateDisplay(parseFloat(myNum ? myNum : 0));
     showingTotal = false;
   }
-  showDebug();
+  updateDebug();
 }
 
 function updateTotal(x) {
   total = x ? x : 0;
   //alert(`total = ${total}`);
-  showDebug();
+  updateDebug();
 }
 
 function updateClear(state) {
