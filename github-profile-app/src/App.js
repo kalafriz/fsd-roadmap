@@ -13,9 +13,12 @@ function App() {
   const [details, setDetails] = useState({});
   const [detailsLoading, setDetailsLoading] = useState(false);
 
+  const [status404, setStatus404] = useState(false);
+
   useEffect(() => {
     setRepos([]); // 2. ... set repos and details to blank (clear them)
     setDetails({});
+    setStatus404(false);
   }, [username]); // 1. Everytime there's a change in the username...
 
   function handleSubmit(e) {
@@ -28,10 +31,21 @@ function App() {
     axios({
       method: "get",
       url: `https://api.github.com/users/${username}/repos`, // returns array of all repos in user's account
-    }).then((result) => {
-      setLoading(false);
-      setRepos(result.data);
-    });
+    })
+      .then((result) => {
+        setLoading(false);
+        setRepos(result.data);
+      })
+      .catch((error) => {
+        setRepos([]);
+        setDetails({});
+        setLoading(false);
+        console.log(error.message);
+        if (error.response.status === 404) {
+          console.log("Username not found!");
+          setStatus404(true);
+        }
+      });
   }
 
   function renderRepo(repo) {
@@ -44,6 +58,16 @@ function App() {
         </h2>
       </div>
     );
+  }
+
+  function render404(status404) {
+    if (status404) {
+      return (
+        <div className="msg-404">
+          <h3>Username not found!</h3>
+        </div>
+      );
+    }
   }
 
   function getDetails(repoName) {
@@ -71,6 +95,7 @@ function App() {
         </button>
       </form>
       <div className="results-container">
+        {render404(status404)}
         {
           repos.map(renderRepo) // iterate w .map, for every repo in repos, call renderRepo(repo)
         }
