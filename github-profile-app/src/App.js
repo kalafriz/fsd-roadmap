@@ -100,7 +100,9 @@ function App() {
           repos.map(renderRepo) // iterate w .map, for every repo in repos, call renderRepo(repo)
         }
       </div>
-      <RepoDetails details={details} loading={detailsLoading} />
+      <div className="details-container">
+        <RepoDetails details={details} loading={detailsLoading} />
+      </div>
     </div>
   );
 }
