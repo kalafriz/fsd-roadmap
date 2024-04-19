@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import RepoDetails from "./RepoDetails";
 import "./App.css";
@@ -12,6 +12,11 @@ function App() {
 
   const [details, setDetails] = useState({});
   const [detailsLoading, setDetailsLoading] = useState(false);
+
+  useEffect(() => {
+    setRepos([]); // 2. ... set repos and details to blank (clear them)
+    setDetails({});
+  }, [username]); // 1. Everytime there's a change in the username...
 
   function handleSubmit(e) {
     e.preventDefault(); // Prevent browser from executing full-page form submit
