@@ -1,13 +1,17 @@
 import logo from "./logo.svg";
-import "./App.css";
 import { useState } from "react";
 import axios from "axios";
+import RepoDetails from "./RepoDetails";
+import "./App.css";
 
 function App() {
   // useState
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [repos, setRepos] = useState([]);
+
+  const [details, setDetails] = useState({});
+  const [detailsLoading, setDetailsLoading] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault(); // Prevent browser from executing full-page form submit
@@ -27,7 +31,7 @@ function App() {
 
   function renderRepo(repo) {
     return (
-      <div className="row" key={repo.id}>
+      <div className="row" onClick={() => getDetails(repo.name)} key={repo.id}>
         <h2 className="repo-name">
           {
             repo.name // from GitHub API
@@ -35,6 +39,17 @@ function App() {
         </h2>
       </div>
     );
+  }
+
+  function getDetails(repoName) {
+    setDetailsLoading(true);
+    axios({
+      method: "get",
+      url: `https://api.github.com/repos/${username}/${repoName}`,
+    }).then((res) => {
+      setDetailsLoading(false);
+      setDetails(res.data);
+    });
   }
 
   return (
@@ -55,6 +70,7 @@ function App() {
           repos.map(renderRepo) // iterate w .map, for every repo in repos, call renderRepo(repo)
         }
       </div>
+      <RepoDetails details={details} loading={detailsLoading} />
     </div>
   );
 }
