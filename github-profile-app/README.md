@@ -11,6 +11,6 @@
 - **GitHub**
 
 ### Notes:
-- Have yet to configure React for this 
+- Have yet to configure React for GitHub pages for this, so page is not live.
 
 ![image](https://github.com/kalafriz/fsd-roadmap/assets/80020511/d69436e4-8937-4ad9-af7b-29863e1500f8)
