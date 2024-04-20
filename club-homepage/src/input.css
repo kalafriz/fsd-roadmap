@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .bg-green-dark {
   background-color: #101a0f;
 }
@@ -5,7 +9,7 @@
   background-color: goldenrod;
 }
 .color-accent-bright {
-  color: rgb(236, 124, 225);
+  color: goldenrod;
 }
 .text-white {
   color: whitesmoke;
@@ -101,7 +105,7 @@ button {
 }
 
 .hero img {
-  top: -100px;
+  top: -110px;
 }
 
 .w-full {
@@ -119,4 +123,11 @@ button {
 }
 .z-2 {
   z-index: 2;
+}
+
+@media (min-width: 640px) {
+}
+
+.font-sedan {
+  font-family: "Sedan", "Times New Roman", Times, serif;
 }
