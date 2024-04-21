@@ -48,21 +48,6 @@ button {
   border-radius: 5px;
 }
 
-.block {
-  display: block;
-}
-.inline-block {
-  display: inline-block;
-}
-.inline {
-  display: inline;
-}
-.hidden {
-  display: none;
-}
-.flex {
-  display: flex;
-}
 .justify-between {
   justify-content: space-between;
 }

@@ -566,6 +566,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .w-full {
   width: 100%;
 }
@@ -649,26 +653,6 @@ button {
   border-radius: 5px;
 }
 
-.block {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.inline {
-  display: inline;
-}
-
-.hidden {
-  display: none;
-}
-
-.flex {
-  display: flex;
-}
-
 .justify-between {
   justify-content: space-between;
 }
@@ -747,4 +731,10 @@ button {
 
 .font-sedan {
   font-family: "Sedan", "Times New Roman", Times, serif;
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
 }
