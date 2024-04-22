@@ -1,12 +1,17 @@
-const navbar = (
-  <nav>
-    <h1>Super Restaurant</h1>
+const root = document.getElementById("root");
+
+const Facts = (
+  <div>
+    <img src="fact.png" alt="" height="50px" />
+    <h1>Fun Facts about Me!</h1>
     <ul>
-      <li>Pricing</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li>I prefer chocolate over vanilla</li>
+      <li>Boston University is my alma mater</li>
+      <li>My favorite season is summer</li>
+      <li>I prefer having an Apple phone but a Windows computer</li>
+      <li>I dislike seafood</li>
     </ul>
-  </nav>
+  </div>
 );
 
-ReactDOM.render(navbar, document.getElementById("root"));
+ReactDOM.render(Facts, root);
