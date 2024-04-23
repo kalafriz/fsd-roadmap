@@ -562,6 +562,10 @@ video {
   position: relative;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -570,8 +574,8 @@ video {
   display: none;
 }
 
-.w-full {
-  width: 100%;
+.w-3\/4 {
+  width: 75%;
 }
 
 .items-center {
@@ -591,8 +595,39 @@ video {
      object-fit: cover;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .text-justify {
   text-align: justify;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-white {
@@ -638,7 +673,6 @@ h1 {
   margin: 0;
   color: white;
   text-decoration: none;
-  font-size: 1.8vw;
   font-family: "IM Fell English SC", "Times New Roman", Times, serif;
   text-shadow: 0 2px 5px #1a264b;
 }
@@ -702,7 +736,8 @@ button {
 }
 
 .hero img {
-  top: -110px;
+  -o-object-position: 0 -110px;
+     object-position: 0 -110px;
 }
 
 .w-full {
@@ -726,15 +761,44 @@ button {
   z-index: 2;
 }
 
-@media (min-width: 640px) {
+.w-350p {
+  max-width: 350%;
+}
+
+@media (min-width: 768px) {
 }
 
 .font-sedan {
   font-family: "Sedan", "Times New Roman", Times, serif;
 }
 
+.footer {
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:pl-20 {
+    padding-left: 5rem;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

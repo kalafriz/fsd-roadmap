@@ -33,7 +33,6 @@ h1 {
   margin: 0;
   color: white;
   text-decoration: none;
-  font-size: 1.8vw;
   font-family: "IM Fell English SC", "Times New Roman", Times, serif;
   text-shadow: 0 2px 5px #1a264b;
 }
@@ -90,7 +89,7 @@ button {
 }
 
 .hero img {
-  top: -110px;
+  object-position: 0 -110px;
 }
 
 .w-full {
@@ -109,10 +108,15 @@ button {
 .z-2 {
   z-index: 2;
 }
-
-@media (min-width: 640px) {
+.w-350p {
+  max-width: 350%;
+}
+@media (min-width: 768px) {
 }
 
 .font-sedan {
   font-family: "Sedan", "Times New Roman", Times, serif;
+}
+
+.footer {
 }
