@@ -28,25 +28,24 @@
   </style>
   <script type="text/babel">
     const rootElement = document.getElementById("root");
+
     function App() {
-      const [name, setName] = React.useState("");
+      const [name, setName] = React.useState(
+        window.localStorage.getItem("name") || ""
+      );
       const handleChange = (event) => setName(event.target.value);
-      const [name2, setName2] = React.useState("");
-      const handleChange2 = (event) => setName2(event.target.value);
+
+      React.useEffect(() => {
+        window.localStorage.setItem("name", name);
+      });
+
       return (
         <div>
           <form action="">
             <label htmlFor="name">Name: </label>
-            <input type="text" onChange={handleChange} id="name" />
+            <input value={name} type="text" onChange={handleChange} id="name" />
           </form>
           {name ? <strong>Hello, {name}</strong> : "Please type your name"}
-          <br />
-          <br />
-          <form action="">
-            <label htmlFor="name2">Another Name: </label>
-            <input type="text" onChange={handleChange2} id="name2" />
-          </form>
-          {name2 ? <strong>Hello, {name2}</strong> : "Please type another name"}
         </div>
       );
     }
