@@ -736,8 +736,8 @@ button {
 }
 
 .hero img {
-  -o-object-position: 0 -110px;
-     object-position: 0 -110px;
+  -o-object-position: 1 -110px;
+     object-position: 1 -110px;
 }
 
 .w-full {
