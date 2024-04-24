@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <nav className="nav">
-        <img src="./fact.png" alt="Fact icon" height="50px" />
+        <img src="./cat.png" alt="Cat icon" height="50px" />
         <ul className="nav-items">
           <li>Pricing</li>
           <li>About</li>
@@ -17,7 +17,7 @@ function Header() {
 
 function Facts() {
   return (
-    <div>
+    <div className="page-content">
       <h1>Fun Facts about Me!</h1>
       <ul>
         <li>I prefer chocolate over vanilla</li>
@@ -32,10 +32,12 @@ function Facts() {
 
 function Footer() {
   return (
-    <small>
-      2024 <a href="https://github.com/kalafriz">@kalafriz</a>. All rights
-      reserved.
-    </small>
+    <footer>
+      <small>
+        2024 <a href="https://github.com/kalafriz">@kalafriz</a>. All rights
+        reserved.
+      </small>
+    </footer>
   );
 }
 
