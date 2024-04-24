@@ -30,9 +30,12 @@
     const rootElement = document.getElementById("root");
 
     function App() {
-      const [name, setName] = React.useState(
-        window.localStorage.getItem("name") || ""
-      );
+      const [name, setName] = React.useState(() => {
+        console.log("Checking local storage");
+        window.localStorage.getItem("name") || "";
+      });
+      console.log("Rendered name");
+
       const handleChange = (event) => setName(event.target.value);
 
       React.useEffect(() => {
