@@ -7,6 +7,7 @@
 - React, ReactDOM, Babel
 
 ### Notes:
+- This app uses CDNs to import React
 - Have yet to configure React for GitHub pages for this, so page is not live.
 
   
