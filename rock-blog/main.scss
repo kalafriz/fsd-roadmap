@@ -288,11 +288,27 @@ nav {
     }
   }
 }
+.contact-form {
+  margin: 4rem;
+}
+.contact-form input,
+.contact-form textarea {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.contact-form button {
+  font-size: 1rem;
+  font-family: Helvetica, sans-serif;
+  padding: 0.5rem;
+  background-color: var(--primary-color-hover);
+  color: var(--light-color);
+  border-radius: 1rem;
+}
 /* =============================================== FOOTER ============================================ */
 .footer {
   background: var(--light-color);
   color: var(--dark-color);
-
   display: flex;
   margin: auto;
   overflow: hidden;
