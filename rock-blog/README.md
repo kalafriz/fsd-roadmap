@@ -13,5 +13,6 @@ webpage, without any tutorials or concrete reference. See notes for known bugs. 
 - All blog preview cards on `index.html` are hard-coded with HTML tables. In retrospect, this would be 
 best done with flex or grid formatting, and obviously generated with React or likewise.
 - Article copy generated with ChatGPT 3.5.
+- Author profile photo generated with [This Person Does Not Exist](https://thispersondoesnotexist.com/).
 
 [![kalafriz github io_fsd-roadmap_rock-blog_index html](https://github.com/kalafriz/fsd-roadmap/assets/80020511/aa39b572-8ce2-4bce-93f4-1108ef62c1d9)](https://kalafriz.github.io/fsd-roadmap/rock-blog/index.html)
