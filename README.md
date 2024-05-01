@@ -6,5 +6,6 @@ This repo is for the mini-projects I have completed following the [**roadmap.sh*
 ### Completed Projects
 - [GitHub API App - User Profile Search](https://github.com/kalafriz/fsd-roadmap/tree/main/github-profile-app) | JavaScript, React ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/github-profile-app))
 - [Calculator App](https://kalafriz.github.io/fsd-roadmap/calculator-app/index.html) | HTML, CSS, JavaScript ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/calculator-app))
+- [Geologist's Blog](https://kalafriz.github.io/fsd-roadmap/rock-blog/index.html) | HTML, CSS ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/rock-blog))
 - [Netflix Landing Page Clone](https://kalafriz.github.io/fsd-roadmap/netflix-landing-clone/index.html) | HTML, CSS, JavaScript ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/netflix-landing-clone))
 - [Convention Website](https://kalafriz.github.io/fsd-roadmap/tinkerer-con/index.html) | HTML, CSS ([Source code](https://github.com/kalafriz/fsd-roadmap/tree/main/tinkerer-con))
