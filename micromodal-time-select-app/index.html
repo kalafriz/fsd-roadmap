@@ -13,6 +13,28 @@
       <p id="timezone">Timezone</p>
       <h1 id="userTime">User Time</h1>
       <p id="userDate">User Date</p>
+
+      <a data-micromodal-trigger="modal-1" href="javascript:;"
+        >Open Modal Dialog</a
+      >
+
+      <div class="micromodal" id="modal-1" aria-hidden="true">
+        <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
+          <div
+            class="micromodal__container"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-1-title"
+          >
+            <button aria-label="Close modal" data-micromodal-close>X</button>
+            <p>hi there, I'm some modal content!</p>
+          </div>
+        </div>
+      </div>
+      <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+      <script>
+        MicroModal.init();
+      </script>
     </div>
   </body>
 </html>
