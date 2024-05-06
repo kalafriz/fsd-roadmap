@@ -5,23 +5,32 @@
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
     function UsernameForm() {
+      const usernameInputRef = React.useRef();
       function handleSubmit(event) {
-        event.preventDefault()
-        const username = event.target.elements.usernameInput.value
-        alert(`You entered: ${username}`)
-      }
+        event.preventDefault();
+        console.log("submitted!");
+        //console.dir(event.target);
 
+        // BAD const username = document.querySelector("input").value;
+        //BAD const username = event.target[0].value;
+        
+        // GOOD
+        const username = event.target.elements.usernameInput.value;
+        // also GOOD const username = usernameInputRef.current.value;
+        
+        alert(`You entered: ${username}`);
+      }
       return (
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="usernameInput">Username:</label>
-            <input id="usernameInput" type="text" />
+            <input ref={usernameInputRef} id="usernameInput" type="text" />
           </div>
           <button type="submit">Submit</button>
         </form>
-      )
+      );
     }
 
-    ReactDOM.render(<UsernameForm />, document.getElementById('root'))
+    ReactDOM.render(<UsernameForm />, document.getElementById("root"));
   </script>
 </body>
