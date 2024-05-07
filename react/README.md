@@ -13,6 +13,7 @@ Collection of projects from React tutorial courses.
 ### Notes:
 
 ## Projects:
+- [Digital Business Card](https://github.com/kalafriz/fsd-roadmap/tree/main/react/learn-react-scrimba/digital-business-card) | React-based business card
 - [Fun Facts About Me](https://github.com/kalafriz/fsd-roadmap/tree/main/react/learn-react-scrimba/fun-facts) | Simple static React page
 
 ### Gallery
