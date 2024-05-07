@@ -2,6 +2,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 const root = document.getElementById("root");
 /*
@@ -13,6 +14,19 @@ const root = document.getElementById("root");
   */
 
 function Info() {
+  const [value, setValue] = React.useState("some\ntext");
+  const [copied, setCopied] = React.useState(false);
+  const onChange = React.useCallback(({ target: { value } }) => {
+    setValue(value);
+    setCopied(true);
+  }, []);
+  const onClick = React.useCallback(({ target: { innerText } }) => {
+    console.log(`Clicked on "${innerText}"!`);
+  }, []);
+  const onCopy = React.useCallback(() => {
+    setCopied(true);
+    alert("Copied to clipboard");
+  }, []);
   return (
     <div className="info">
       <img
@@ -25,7 +39,11 @@ function Info() {
         <span className="lastname">Alafriz</span>
       </h1>
       <h3>Full Stack Developer</h3>
-      <p>kirstenalafriz@gmail.com</p>
+      <CopyToClipboard onCopy={onCopy} text={"kirstenalafriz@gmail.com"}>
+        <button>
+          <a href="">kirstenalafriz@gmail.com</a>
+        </button>
+      </CopyToClipboard>
     </div>
   );
 }
