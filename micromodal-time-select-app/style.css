@@ -61,3 +61,114 @@
     transform: translateY(0);
   }
 }
+
+@font-face {
+  font-family: DSEG7 Classic;
+  src: url("dseg7classic-regular-webfont.woff");
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(12, 12, 19);
+}
+a {
+  text-decoration: none;
+  color: rgb(25, 25, 51);
+}
+
+.time-outer-container,
+.micromodal-outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  margin: 2rem auto;
+  width: 530px;
+  padding: 2rem 3rem 1rem 3rem;
+  background: linear-gradient(0deg, rgb(68, 68, 68), rgb(143, 143, 143));
+  border-radius: 3rem;
+  border: 0.5rem outset rgb(190, 190, 190);
+}
+
+.micromodal-outer-container {
+  flex-direction: row;
+  padding: 1rem;
+  width: 450px;
+  border: 0.3rem outset rgb(190, 190, 190);
+  border-radius: 1rem;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.time-container,
+.micromodal__container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  padding: 0.5rem 2rem;
+  margin: auto;
+  line-height: 1rem;
+
+  border: 0.3rem inset rgb(190, 190, 190);
+
+  background: linear-gradient(
+    0deg,
+    rgba(132, 158, 148, 1) 0%,
+    rgba(143, 170, 161, 1) 44%,
+    rgba(158, 191, 180, 1) 67%,
+    rgba(154, 187, 176, 1) 100%
+  );
+  box-shadow: inset 0 -10px 25px -5px rgb(52, 56, 54);
+  border-radius: 1rem;
+
+  color: rgb(25, 25, 51);
+}
+
+.micromodal-trigger {
+  margin: 1rem auto 0 auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+
+  color: rgb(15, 15, 15);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: small;
+
+  background: linear-gradient(0deg, rgb(73, 73, 73), rgb(143, 143, 143));
+  border-radius: 1rem;
+  border: 0.1rem outset rgb(114, 114, 114);
+  box-shadow: -1px -1px 2px 2px rgb(29, 29, 29), 1px 1px 2px 2px rgb(97, 97, 97);
+}
+
+.micromodal__container select {
+  display: inline-block;
+  font-family: "Fira Sans", sans-serif;
+  padding: 0.6rem;
+  width: 70%;
+  background: none;
+  border: 1px solid rgb(25, 25, 51);
+  border-radius: 0.5rem;
+}
+
+.micromodal__container button {
+  display: inline-block;
+  width: 1px;
+  padding: 0.6rem 0 0.6rem 12px;
+  align-self: center;
+  background: none;
+  border: none;
+  font-size: larger;
+}
+
+#timezone,
+#userDate {
+  font-family: "Fira Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#userTime {
+  font-family: "DSEG7 Classic", monospace;
+  font-size: 4rem;
+}
