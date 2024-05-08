@@ -17,6 +17,6 @@ Collection of projects from React tutorial courses.
 - [Fun Facts About Me](https://github.com/kalafriz/fsd-roadmap/tree/main/react/learn-react-scrimba/fun-facts) | Simple static React page
 
 ### Gallery
-![image](https://github.com/kalafriz/fsd-roadmap/assets/80020511/24189e5d-432d-461e-8dd7-e597217b4162)
+[![image](https://github.com/kalafriz/fsd-roadmap/assets/80020511/24189e5d-432d-461e-8dd7-e597217b4162)](https://kalafriz.github.io/fsd-roadmap/learn-react-scrimba/digital-business-card/src/index.html)
 
 ![image](https://github.com/kalafriz/fsd-roadmap/assets/80020511/b3c912df-27b8-454e-aaa6-6f7e4d4c3fd3)
