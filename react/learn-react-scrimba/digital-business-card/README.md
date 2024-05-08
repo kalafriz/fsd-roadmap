@@ -1,10 +1,10 @@
-# [Fun Facts Page](https://kalafriz.github.io/fsd-roadmap/learn-react-scrimba/digital-business-card/src/index.html) | JavaScript, React
+# [Digital Business Card](https://kalafriz.github.io/fsd-roadmap/learn-react-scrimba/digital-business-card/src/index.html) | React
 
 ### About:
  Simple digital business card React app. See requirements.
 
 ### Packages:
-- React, ReactDOM, Babel
+- React, Babel
 
 ### Notes:
 - Have yet to configure React for GitHub pages for this, so page is not live.
