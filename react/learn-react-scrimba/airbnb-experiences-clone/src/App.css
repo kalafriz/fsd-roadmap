@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+nav {
+  height: 70px;
+  display: flex;
+  padding: 20px 36px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+.nav--logo {
+  max-width: 100px;
+}
+
+section {
+  padding: 20px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+.hero--photo {
+  max-width: 400px;
+  align-self: center;
+}
+.hero--header {
+  margin-bottom: 16px;
+}
+.hero--text {
+  margin-top: 0px;
+}
