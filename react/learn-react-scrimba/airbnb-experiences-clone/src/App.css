@@ -70,3 +70,15 @@ section {
 .hero--text {
   margin-top: 0px;
 }
+.card--image {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.card--star {
+  width: 1rem;
+}
+.grey {
+  color: grey;
+}
