@@ -1,9 +1,9 @@
 import star from "../img/star.png";
 
 export default function Card(props) {
-  console.log(props);
+  //console.log(props);
   return (
-    <>
+    <div className="card">
       <img
         src={`${process.env.PUBLIC_URL}/img/${props.img}`}
         alt="Experience Preview"
@@ -19,6 +19,6 @@ export default function Card(props) {
       <p>
         <strong>{`From $${props.price} `}</strong>/ person
       </p>
-    </>
+    </div>
   );
 }
