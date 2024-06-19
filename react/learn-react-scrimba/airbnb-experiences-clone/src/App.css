@@ -96,8 +96,12 @@ footer {
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 20px;
-  padding: 20px 36px;
+  padding: 25px 36px;
   box-shadow: inset 0px 7px 7px 0px rgba(0, 0, 0, 0.1);
+}
+footer a {
+  text-decoration: none;
+  color: black;
 }
