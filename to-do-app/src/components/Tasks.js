@@ -2,17 +2,24 @@ import React, { Component } from "react";
 import Card from "./Card";
 import { Draggable } from "react-drag-reorder";
 
-class Drag extends Component {
-  constructor(items) {
+function TaskList(props) {
+  const [tasks, setTasks] = React.useState([]);
+  return <Tasks items={["a", "b", "c"]} />;
+}
+export default TaskList;
+
+class Tasks extends Component {
+  constructor(props) {
     super();
-    this.words = ["Hello", "Hi", "How are you", "Cool"];
   }
+
   render() {
     return (
       <div className="flex-container">
         <div className="row">
+          <p>{this.props.items}</p>
           <Draggable>
-            {this.words.map((word, idx) => {
+            {this.props.items.map((word, idx) => {
               return (
                 <div key={idx} className="flex-item">
                   <Card content={word}></Card>
@@ -25,5 +32,3 @@ class Drag extends Component {
     );
   }
 }
-
-export default Drag;
