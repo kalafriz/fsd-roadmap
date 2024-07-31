@@ -8,3 +8,7 @@ Footer {
   width: 100%;
   height: 2rem;
 }
+
+.entry {
+  display: flex;
+}
