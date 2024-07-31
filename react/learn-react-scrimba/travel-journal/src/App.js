@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Entry from "./components/Entry";
+import Form from "./components/Form";
 import data from "./data";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
+      <Form></Form>
       <div className="entries">{entries}</div>
       <Footer></Footer>
     </div>
