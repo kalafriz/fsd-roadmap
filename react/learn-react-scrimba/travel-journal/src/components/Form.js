@@ -1,6 +1,4 @@
 export default function Form({ addEntry }) {
-  const form = document.querySelector("form");
-
   function handleSubmit(event) {
     event.preventDefault();
     alert("form submitted!");
@@ -11,22 +9,46 @@ export default function Form({ addEntry }) {
   }
 
   return (
-    <div className="form">
-      form yayyyy
+    <div className="form--card">
+      <h5 className="form--header">New Entry</h5>
       <form onSubmit={handleSubmit}>
-        <input name="title" type="text" placeholder="Title" required />
-        <input name="location" type="text" placeholder="Location" required />
-        <input name="googleMapsUrl" type="url" placeholder="Google Maps URL" />
-        <input name="startDate" type="date" required />
-        <input name="endDate" type="date" />
         <input
-          name="description"
-          type="text"
-          placeholder="Description"
+          name="imageUrl"
+          type="file"
+          accept="image/*"
+          className="form--img"
           required
         />
-        <input name="imageUrl" type="file" accept="image/*" required />
-        <input type="submit" />
+        <span className="form--data">
+          <input
+            name="title"
+            type="text"
+            placeholder="Title"
+            className="h3"
+            required
+          />
+          <input
+            name="location"
+            type="text"
+            placeholder="Location"
+            className="h5"
+            required
+          />
+          <input
+            name="googleMapsUrl"
+            type="url"
+            placeholder="Google Maps URL"
+          />
+          <input name="startDate" type="date" required />
+          <input name="endDate" type="date" />
+          <input
+            name="description"
+            type="text"
+            placeholder="Description"
+            required
+          />
+          <input type="submit" />
+        </span>
       </form>
     </div>
   );
