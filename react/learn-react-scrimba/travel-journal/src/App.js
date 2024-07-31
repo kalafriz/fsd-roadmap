@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Entries from "./components/Entries";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const initialData = [
   {
@@ -20,6 +20,10 @@ const initialData = [
 
 function App() {
   const [data, setData] = useState(initialData);
+
+  useEffect(() => {
+    localStorage.setItem("data", JSON.stringify(data));
+  }, [data]);
 
   const addEntry = (entry) => {
     alert("add entry");
