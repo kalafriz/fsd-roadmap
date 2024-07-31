@@ -19,7 +19,10 @@ const initialData = [
 ];
 
 function App() {
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState(() => {
+    const localData = JSON.parse(localStorage.getItem("data"));
+    return localData || initialData;
+  });
 
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(data));
