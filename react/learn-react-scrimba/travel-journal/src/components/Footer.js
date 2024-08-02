@@ -8,6 +8,9 @@ export default function Footer() {
       >
         Location icons created by kmg design - Flaticon
       </a>
+      <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">
+        Upload icons created by Freepik - Flaticon
+      </a>
     </footer>
   );
 }
