@@ -7,14 +7,18 @@ export default function Entry(props) {
         <span>
           <h3>
             {props.title}
-            <a href={props.googleMapsUrl}>
-              <img src={pin} alt="" className="entry--pin" />
-            </a>
+            {props.googleMapsUrl ? (
+              <a href={props.googleMapsUrl}>
+                <img src={pin} alt="" className="entry--pin" />
+              </a>
+            ) : (
+              ``
+            )}
           </h3>
         </span>
         <h5>{props.location}</h5>
         <p>
-          {props.startDate} - {props.endDate}
+          {props.startDate} {props.endDate ? `- ${props.endDate}` : ""}
         </p>
         <p className="entry--description">{props.description}</p>
       </div>
