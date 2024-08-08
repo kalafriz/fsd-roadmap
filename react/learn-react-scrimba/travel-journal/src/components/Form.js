@@ -75,14 +75,18 @@ export default function Form({ addEntry }) {
             type="url"
             placeholder="Google Maps URL"
           />
-          <input name="startDate" type="date" required />
-          <input name="endDate" type="date" />
-          <input
+          <span>
+            <input name="startDate" type="date" required /> -{" "}
+            <input name="endDate" type="date" />
+          </span>
+          <br />
+          <textarea
             name="description"
             type="text"
             placeholder="Description"
             required
           />
+          <br />
           <input type="submit" />
         </span>
       </form>
