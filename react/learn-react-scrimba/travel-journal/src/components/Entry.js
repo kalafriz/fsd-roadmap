@@ -1,4 +1,5 @@
 import pin from "./icons/pin.png";
+import moment from "moment";
 export default function Entry(props) {
   return (
     <div className="entry">
@@ -18,7 +19,8 @@ export default function Entry(props) {
         </span>
         <h5>{props.location}</h5>
         <p>
-          {props.startDate} {props.endDate ? `- ${props.endDate}` : ""}
+          {moment(props.startDate).format("LL")}{" "}
+          {props.endDate ? `- ${moment(props.endDate).format("LL")}` : ""}
         </p>
         <p className="entry--description">{props.description}</p>
       </div>
