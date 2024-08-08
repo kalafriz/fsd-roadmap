@@ -22,7 +22,15 @@ h5,
 .h5 {
   font-size: 1.8rem;
 }
-
+nav {
+  padding: 1rem 2rem;
+  margin: 0 0 2rem 0;
+  box-shadow: 0px 0px 12px -3px rgba(0, 0, 0, 0.75);
+}
+.logo {
+  font-size: 2rem;
+  color: rgb(49, 125, 197);
+}
 .entries,
 .form--card {
   margin: 0 10%;
@@ -86,4 +94,13 @@ input:focus {
 }
 .entry--description {
   padding: 1rem 0;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(236, 236, 236);
+  padding: 0.5rem 0 1rem 0;
+}
+footer a {
+  color: black;
 }

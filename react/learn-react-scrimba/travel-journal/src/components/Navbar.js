@@ -1,3 +1,7 @@
 export default function Navbar() {
-  return <nav>navbar yay</nav>;
+  return (
+    <nav>
+      <span className="logo">TravelJournal</span>
+    </nav>
+  );
 }
