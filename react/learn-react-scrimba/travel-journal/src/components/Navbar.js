@@ -1,7 +1,9 @@
+import pin from "./icons/pin.png";
 export default function Navbar() {
   return (
     <nav>
-      <span className="logo">TravelJournal</span>
+      <img src={pin} alt="" height="25px" />
+      <span className="logo"> TravelJournal</span>
     </nav>
   );
 }
