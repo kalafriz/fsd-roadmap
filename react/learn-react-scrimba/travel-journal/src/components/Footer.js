@@ -16,6 +16,8 @@ export default function Footer() {
       <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">
         <small>Upload icons created by Freepik - Flaticon</small>
       </a>
+      <br />
+      &#20;
     </footer>
   );
 }
