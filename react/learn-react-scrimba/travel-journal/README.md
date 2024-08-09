@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# [Travel Journal App](https://kalafriz.github.io/fsd-roadmap/learn-react-scrimba/travel-journal/src/index.html) | React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### About:
+ React app to log travel memories with images and text.
 
-## Available Scripts
+### Packages:
+- React, Babel
 
-In the project directory, you can run:
+### Notes:
+- Added entry form in addition to project requirements. Some entry requirements for form data (i.e. end date) have been made optional for practicality. ([See requirements below](#requirements--reference))
+- All input data is stored in local storage.
+    - Images are converted to base64 to allow for this
+    - Data array stored in `App.js` instead of separate file (as suggested by project requirements) to avoid bugs with importing/creating new instances of React hooks.
+- Have yet to configure React for GitHub pages for this, so page is not live.
+### Gallery
+| Desktop | Tablet | Mobile |
+|-|-|-|
+| <img src="https://github.com/user-attachments/assets/91f85f04-7507-448c-a96a-814142b72f6d"> | <img src="https://github.com/user-attachments/assets/25c80382-516c-4822-aed6-ff0ed498abf0"> | <img src="https://github.com/user-attachments/assets/d340a85a-2802-4d09-bc97-63cf8271a030"> |
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![image](https://github.com/user-attachments/assets/1b348776-e96f-4882-a6c0-403b292c55bf)](https://kalafriz.github.io/fsd-roadmap/learn-react-scrimba/travel-journal/src/index.html)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Requirements + Reference
+Fulfilling the guidelines from [this tutorial](https://www.youtube.com/watch?v=bMknfKXIFA8&ab_channel=freeCodeCamp.org) via freeCodeCamp.org.
 
-### `npm test`
+![image](https://github.com/user-attachments/assets/b3406d6c-fe0f-40ac-97b5-cb6bcd5114c4)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
